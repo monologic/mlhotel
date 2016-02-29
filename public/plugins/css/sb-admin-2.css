@@ -15,8 +15,8 @@ body {
 }
 
 #page-wrapper {
-    padding: 0 15px;
-    min-height: 568px;
+    padding: 10px;
+    min-height: 600px;
     background-color:rgb(230,230,230);
 }
 
@@ -87,7 +87,9 @@ body {
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 15px;
-    background-color: rgba(44, 115, 200, 1);
+    height: 100%;
+    background-color: rgb(44, 115, 200);
+    padding-top: 10px;
 }
 
 .sidebar .sidebar-search {
@@ -412,4 +414,17 @@ i{
 }
 .tit{
    color: rgb(44, 115, 200);
+}
+.pr{
+    display: block;
+    position: fixed;
+    height: 100%;
+    border-radius: 0px;
+
+}
+.nv{
+    top:0;
+    position: fixed;
+    background-color: black;
+    width: 100%;
 }
