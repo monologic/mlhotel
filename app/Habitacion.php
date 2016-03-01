@@ -13,9 +13,9 @@ class Habitacion extends Model
     	return $this->belongsTo('App\Estado');
     }
 
-    public function haptipo()
+    public function habsubtipo()
     {
-    	return $this->belongTo('App\Habtipo');
+    	return $this->belongsTo('App\Habsubtipo');
     }
 
     public function habreservas()

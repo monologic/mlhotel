@@ -4,18 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Empleado extends Model
+class Habsubtipo extends Model
 {
     public $timestamps = false;
 
-    public function usuario()
+    public function habitacions()
     {
-    	return $this->hasOne('App\Usuario');
-    }
-
-    public function emptipo()
-    {
-    	return $this->belongsTo('App\Emptipo');
+        return $this->hasMany('App\Habitacion');
     }
 
     public function hotel()
@@ -23,4 +18,3 @@ class Empleado extends Model
     	return $this->belongsTo('App\Hotel');
     }
 }
-

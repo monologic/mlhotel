@@ -8,8 +8,8 @@ class Habtipo extends Model
 {
 	public $timestamps = false;
 	 
-    public function habitacions()
+    public function habsubtipos()
     {
-        return $this->hasMany('App\Habitacion');
+        return $this->hasMany('App\Habsubtipo');
     }
 }

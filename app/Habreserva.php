@@ -10,7 +10,7 @@ class Habreserva extends Model
     
     public function habitacion()
     {
-    	return $this->belongTo('App\Habitacion');
+    	return $this->belongsTo('App\Habitacion');
     }
 
     public function reserva()
