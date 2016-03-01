@@ -25,6 +25,11 @@
 	content: ' ';
 	display: table;
 }
+#page-wrapper {
+    
+    padding: 0px;
+
+}
 
 .cf:after {
 	clear: both;

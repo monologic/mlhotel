@@ -10,10 +10,18 @@
     <meta name="keywords" content="blueprint, template, html, css, menu, responsive, mobile-friendly" />
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- food icons -->
     <link rel="stylesheet" type="text/css" href="plugins/multilevel/css/organicfoodicons.css" />
     <!-- demo styles -->
-    <link rel="stylesheet" type="text/css" href="plugins/css/sb-admin-2.css" />
 
     <link rel="stylesheet" type="text/css" href="plugins/multilevel/css/demo.css" />
     <!-- menu styles -->
@@ -35,10 +43,13 @@
             <button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
             <div class="menu__wrap">
                 <ul data-menu="main" class="menu__level">
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Vegetables</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-2" href="#">Fruits</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-3" href="#">Grains</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-4" href="#">Mylk &amp; Drinks</a></li>
+                    <li class="menu__item"><a class="menu__link" href="dashboard.html">Panel de Control</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Reservas</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-2" href="#">Habitaciones</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-3" href="#">Clientes</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-4" href="#">Servicios</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-5" href="#">Empleado</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-5" href="#">Usuarios</a></li>
                 </ul>
                 <!-- Submenu 1 -->
                 <ul data-menu="submenu-1" class="menu__level">
@@ -103,7 +114,7 @@
             </div>
         </nav>
     
-        <div id="wrapper">
+        <div class="content">
 
             <div ng-view></div>
 

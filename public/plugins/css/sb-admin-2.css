@@ -7,34 +7,25 @@
 body {
     background-color: #f8f8f8;
     font-family: 'Open Sans', sans-serif;
+    position: relative;
 }
 
 #wrapper {
     width: 100%;
-    background-color: white;
-
+    display: inline-block;
+    width: 97%;
+    float: right;
+    
 }
 
 #page-wrapper {
     
-    top:20px;
-    padding: 10px;
-    min-height: 600px;
-    display: block;
-    position: left;
-    background-color: green;
-
+    padding: 0px;
 
 }
 
 @media(min-width:768px) {
-    #page-wrapper {
-        position: inherit;
-        margin: 0 0 0 250px;
-        padding: 0 30px;
-        border-left: 0px solid #e7e7e7;
-        top:0;
-    }
+    
 }
 
 .navbar-top-links li {
