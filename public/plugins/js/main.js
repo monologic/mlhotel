@@ -16,8 +16,13 @@ var app = angular.module('tutorialWebApp', [
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     // Home
-    .when("/", {templateUrl: "partials/flot.html", controller: "PageCtrl"})
+    .when("/", {templateUrl: "partials/dashboard.html", controller: "PageCtrl"})
     // Pages
+    /*
+        Rutas relacionadas a empleados
+    */
+    .when("/Cargos/crear", {templateUrl: "partials/emptipo/crear.html", controller: "PageCtrl"})
+
     .when("/blank", {templateUrl: "partials/blank.html", controller: "PageCtrl"})
     .when("/buttons", {templateUrl: "partials/buttons.html", controller: "PageCtrl"})
     .when("/flot", {templateUrl: "partials/flot.html", controller: "PageCtrl"})
@@ -39,3 +44,4 @@ app.controller('PageCtrl', function (/* $scope, $location, $http */) {
   console.log("Page Controller reporting for duty.");
 
 });
+

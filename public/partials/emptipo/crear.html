@@ -1,0 +1,16 @@
+<div id="page-wrapper" ng-controller="cargoController">
+    <label>{{ mensaje }}</label>
+    <form>
+        <div class="form-group">
+            <label for="tipo">Cargo</label>
+            <input type="text" class="form-control" id="tipo" placeholder="Cargo de un Empleado" ng-model="tipo">
+        </div>
+         <div class="form-group">
+            <label for="descripcion">Descripcion</label>
+            <input type="text" class="form-control" id="descripcion" placeholder="Descripción del cargo" ng-model="descripcion">
+        </div>
+        
+        <button class="btn btn-default" ng-click="enviar();">Submit</button>
+    </form>
+
+</div>

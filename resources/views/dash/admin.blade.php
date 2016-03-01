@@ -11,6 +11,8 @@
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="favicon.ico">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -44,28 +46,20 @@
             <div class="menu__wrap">
                 <ul data-menu="main" class="menu__level">
                     <li class="menu__item"><a class="menu__link" href="dashboard.html">Panel de Control</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Reservas</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-2" href="#">Habitaciones</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-3" href="#">Clientes</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-4" href="#">Servicios</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-5" href="#">Empleado</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-5" href="#">Usuarios</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Empleado</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-2" href="#">Reservas</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-3" href="#">Habitaciones</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-4" href="#">Clientes</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-5" href="#">Servicios</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-6" href="#">Usuarios</a></li>
                 </ul>
                 <!-- Submenu 1 -->
                 <ul data-menu="submenu-1" class="menu__level">
-                    <li class="menu__item"><a class="menu__link" href="#">Stalk Vegetables</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Roots &amp; Seeds</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Cabbages</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Salad Greens</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Mushrooms</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1-1" href="#">Sale %</a></li>
-                </ul>
-                <!-- Submenu 1-1 -->
-                <ul data-menu="submenu-1-1" class="menu__level">
-                    <li class="menu__item"><a class="menu__link" href="#">Fair Trade Roots</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Dried Veggies</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Our Brand</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Homemade</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Ver Empleados</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Crear Empleado</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Ver Cargos</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#/Cargos/crear">Crear Cargo</a></li>
                 </ul>
                 <!-- Submenu 2 -->
                 <ul data-menu="submenu-2" class="menu__level">
@@ -124,12 +118,19 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
 
+
         <!-- Our Website Javascripts -->
     <script src="{{ asset('plugins/js/main.js') }}"></script>
     <!-- /view -->
     <script src="plugins/multilevel/js/classie.js"></script>
     <script src="plugins/multilevel/js/dummydata.js"></script>
     <script src="plugins/multilevel/js/main.js"></script>
+
+    <!-- Controladrores de Angular -->
+
+    <script src="plugins/js/controllers/cargoController.js"></script>    
+
+
     <script>
     (function() {
         var menuEl = document.getElementById('ml-menu'),

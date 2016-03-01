@@ -9,9 +9,20 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/', function () {
-    return view('dash.admin');
+
+Route::group(['prefix'=> 'admin'], function(){
+
+	Route::get('/', ['as' => 'admin', function () {
+		return view('dash.admin');
+	}]);
+
+	Route::resource('emptipo', 'EmptipoController');
+
+
+	
+
 });
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
