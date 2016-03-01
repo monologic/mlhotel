@@ -1,71 +1,154 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js"> <!--<![endif]-->
-    <head>
+<html lang="en" class="no-js">
 
-        <!-- Meta-Information -->
-        <title>Administrador</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blueprint: Multi-Level Menu</title>
+    <meta name="description" content="Blueprint: A basic template for a responsive multi-level menu" />
+    <meta name="keywords" content="blueprint, template, html, css, menu, responsive, mobile-friendly" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- food icons -->
+    <link rel="stylesheet" type="text/css" href="plugins/multilevel/css/organicfoodicons.css" />
+    <!-- demo styles -->
+    <link rel="stylesheet" type="text/css" href="plugins/css/sb-admin-2.css" />
+
+    <link rel="stylesheet" type="text/css" href="plugins/multilevel/css/demo.css" />
+    <!-- menu styles -->
+    <link rel="stylesheet" type="text/css" href="plugins/multilevel/css/component.css" />
+    <script src="plugins/multilevel/js/modernizr-custom.js"></script>
+</head>
+
+<body ng-app="tutorialWebApp">
+    <!-- Main container -->
+    <div class="container">
+        <!-- Blueprint header -->
         
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-
-        <!-- Our Website CSS Styles -->
-        <!-- MetisMenu CSS -->
-        <link rel="stylesheet" href="{{ asset('plugins/css/plugins/metisMenu/metisMenu.min.css') }}">
-
-        <!-- Timeline CSS -->
-        <link rel="stylesheet" href="{{ asset('plugins/css/plugins/timeline.css') }}">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="{{ asset('plugins/css/sb-admin-2.css') }}">
-
-        <!-- Morris Charts CSS -->
-        <link rel="stylesheet" href="{{ asset('plugins/css/plugins/morris.css') }}">
-
-    </head>
-    <body ng-app="tutorialWebApp">
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!-- Our Website Content Goes Here -->
+        <button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
+        <nav id="ml-menu" class="menu">
+            <div class="dummy-logo">
+                <div class="dummy-icon foodicon foodicon--coconut"></div>
+                <h2 class="dummy-heading">Fooganic</h2>
+            </div>
+            <button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
+            <div class="menu__wrap">
+                <ul data-menu="main" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Vegetables</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-2" href="#">Fruits</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-3" href="#">Grains</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-4" href="#">Mylk &amp; Drinks</a></li>
+                </ul>
+                <!-- Submenu 1 -->
+                <ul data-menu="submenu-1" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Stalk Vegetables</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Roots &amp; Seeds</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Cabbages</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Salad Greens</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Mushrooms</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1-1" href="#">Sale %</a></li>
+                </ul>
+                <!-- Submenu 1-1 -->
+                <ul data-menu="submenu-1-1" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Fair Trade Roots</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Dried Veggies</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Our Brand</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Homemade</a></li>
+                </ul>
+                <!-- Submenu 2 -->
+                <ul data-menu="submenu-2" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Citrus Fruits</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Berries</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-2-1" href="#">Special Selection</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Tropical Fruits</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Melons</a></li>
+                </ul>
+                <!-- Submenu 2-1 -->
+                <ul data-menu="submenu-2-1" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Exotic Mixes</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Wild Pick</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Vitamin Boosters</a></li>
+                </ul>
+                <!-- Submenu 3 -->
+                <ul data-menu="submenu-3" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Buckwheat</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Millet</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Quinoa</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Wild Rice</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Durum Wheat</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-3-1" href="#">Promo Packs</a></li>
+                </ul>
+                <!-- Submenu 3-1 -->
+                <ul data-menu="submenu-3-1" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Starter Kit</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">The Essential 8</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Bolivian Secrets</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Flour Packs</a></li>
+                </ul>
+                <!-- Submenu 4 -->
+                <ul data-menu="submenu-4" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Grain Mylks</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Seed Mylks</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Nut Mylks</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Nutri Drinks</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-4-1" href="#">Selection</a></li>
+                </ul>
+                <!-- Submenu 4-1 -->
+                <ul data-menu="submenu-4-1" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Nut Mylk Packs</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Amino Acid Heaven</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Allergy Free</a></li>
+                </ul>
+            </div>
+        </nav>
+    
         <div id="wrapper">
 
-            <div ng-include='"templates/navigation.html"'></div>
-            
-
-                <div ng-view></div>
-
+            <div ng-view></div>
 
         </div>
-        <!-- /#wrapper -->
+    </div>
 
-        <!-- Vendor: Javascripts -->
-<!--
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
--->
-        <script src="{{ asset('plugins/js/jquery-1.11.0.js') }}"></script>
-        <script src="{{ asset('plugins/js/bootstrap.min.js') }}"></script>
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-
-        <!-- Vendor: Angular, followed by our custom Javascripts -->
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
 
         <!-- Our Website Javascripts -->
-        <script src="{{ asset('plugins/js/main.js') }}"></script>
+    <script src="{{ asset('plugins/js/main.js') }}"></script>
+    <!-- /view -->
+    <script src="plugins/multilevel/js/classie.js"></script>
+    <script src="plugins/multilevel/js/dummydata.js"></script>
+    <script src="plugins/multilevel/js/main.js"></script>
+    <script>
+    (function() {
+        var menuEl = document.getElementById('ml-menu'),
+            mlmenu = new MLMenu(menuEl, {
+                // breadcrumbsCtrl : true, // show breadcrumbs
+                // initialBreadcrumb : 'all', // initial breadcrumb text
+                backCtrl : false, // show back button
+                // itemsDelayInterval : 60, // delay between each menu item sliding animation
+                //onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+            });
 
-    </body>
+        // mobile menu toggle
+        var openMenuCtrl = document.querySelector('.action--open'),
+            closeMenuCtrl = document.querySelector('.action--close');
+
+        openMenuCtrl.addEventListener('click', openMenu);
+        closeMenuCtrl.addEventListener('click', closeMenu);
+
+        function openMenu() {
+            classie.add(menuEl, 'menu--open');
+        }
+
+        function closeMenu() {
+            classie.remove(menuEl, 'menu--open');
+        }
+
+        
+        
+    })();
+    </script>
+</body>
+
 </html>

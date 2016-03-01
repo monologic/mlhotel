@@ -1,318 +1,110 @@
-   <!-- Navigation -->
-    <nav class=" sidebar pr" role="navigation">
-            <div class="sidebar-nav navbar-collapse panel">
-            
-                <div class="logo">
-                    <img src="../plugins/img/logo.png">
-                </div>
-                
-                <a href="#/"><h4 class="text-center color2">Panel de Control</h4></a>
-                <ul class="nav" id="side-menu">
-                     <li class="apa">
-                        <a href="#" class="color"><i class="fa fa-edit "></i> Reservas</a>
-                  
-                        <!-- /.nav-second-level -->
-                    </li>   
-
-                     <li class="apa">
-                        <a href="#" class="color"><i class="fa fa-folder-open fa-fw"></i> Registro<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level sub">
-                            <li class="">
-                                <a href="#/flot" class="color"> <i class="fa fa-eye fa-fw"></i> Registros</a>
-                            </li>
-                            <li class="">
-                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Nuevo Registro</a>
-                            </li>
-                            
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-                    <li class="apa">
-                        <a href="#"class="color"><i class="fa fa-user fa-fw"></i> Clientes<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level sub">
-                            <li>
-                                <a href="#/flot" class="color"> <i class="fa fa-male fa-fw"></i> Clientes Registrados</a>
-                            </li>
-                            <li>
-                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Nuevo Cliente</a>
-                            </li>
-                            <li>
-                                <a href="#/morris" class="color"><i class="fa fa-search fa-fw"></i> Busqueda de Clientes</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                   
-                    <li class="apa">
-                        <a href="#" class="color"><i class="fa fa-tags fa-fw"></i> Habitaciones<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level sub">
-                            <li>
-                                <a href="#/flot" class="color"> <i class="fa fa-male fa-fw"></i> Estado de Habitaciones</a>
-                            </li>
-                            <li>
-                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Nueva Habitacion</a>
-                            </li>
-                            <li>
-                                <a href="#/morris" class="color"><i class="fa fa-share-alt fa-fw"></i> Tipo de Habitaciones</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-                    <li class="apa">
-                        <a href="#" class="color"><i class="fa fa-cutlery fa-fw"></i> Servicios<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level sub">
-                           <li>
-                                <a href="#/morris" class="color"><i class="fa fa-share-alt fa-fw"></i> Tipo de Servicios</a>
-                            </li>
-                            <li>
-                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Agregar Servicio</a>
-                            </li>
-                            
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>  
-
-                    <li class="apa">
-                        <a href="#" class="color"><i class="fa fa-group fa-fw"></i> Empleados<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level sub">
-                            <li>
-                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Agregar Empleado</a>
-                            </li>
-                            
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>    
-
-                    <li class="apa">
-                        <a href="#" class="color"><i class="fa fa-key fa-fw"></i> Usuarios<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level sub">
-                            <li>
-                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Agregar Servicio</a>
-                            </li>
-                            
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>      
-
-                   
+<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
+        <nav id="ml-menu" class="menu">
+            <div class="dummy-logo">
+                <div class="dummy-icon foodicon foodicon--coconut"></div>
+                <h2 class="dummy-heading">Fooganic</h2>
+            </div>
+            <button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
+            <div class="menu__wrap">
+                <ul data-menu="main" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Vegetables</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-2" href="#">Fruits</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-3" href="#">Grains</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-4" href="#">Mylk &amp; Drinks</a></li>
+                </ul>
+                <!-- Submenu 1 -->
+                <ul data-menu="submenu-1" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Stalk Vegetables</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Roots &amp; Seeds</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Cabbages</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Salad Greens</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Mushrooms</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1-1" href="#">Sale %</a></li>
+                </ul>
+                <!-- Submenu 1-1 -->
+                <ul data-menu="submenu-1-1" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Fair Trade Roots</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Dried Veggies</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Our Brand</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Homemade</a></li>
+                </ul>
+                <!-- Submenu 2 -->
+                <ul data-menu="submenu-2" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Citrus Fruits</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Berries</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-2-1" href="#">Special Selection</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Tropical Fruits</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Melons</a></li>
+                </ul>
+                <!-- Submenu 2-1 -->
+                <ul data-menu="submenu-2-1" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Exotic Mixes</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Wild Pick</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Vitamin Boosters</a></li>
+                </ul>
+                <!-- Submenu 3 -->
+                <ul data-menu="submenu-3" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Buckwheat</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Millet</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Quinoa</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Wild Rice</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Durum Wheat</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-3-1" href="#">Promo Packs</a></li>
+                </ul>
+                <!-- Submenu 3-1 -->
+                <ul data-menu="submenu-3-1" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Starter Kit</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">The Essential 8</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Bolivian Secrets</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Flour Packs</a></li>
+                </ul>
+                <!-- Submenu 4 -->
+                <ul data-menu="submenu-4" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Grain Mylks</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Seed Mylks</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Nut Mylks</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Nutri Drinks</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-4-1" href="#">Selection</a></li>
+                </ul>
+                <!-- Submenu 4-1 -->
+                <ul data-menu="submenu-4-1" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Nut Mylk Packs</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Amino Acid Heaven</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Allergy Free</a></li>
                 </ul>
             </div>
         </nav>
+    <!-- /view -->
+    <script src="{{ asset('plugins/multilevel/js/classie.js') }}"></script>
+    <script src="{{ asset('plugins/multilevel/js/dummydata.js') }}"></script>
+    <script src="{{ asset('plugins/multilevel/js/main.js') }}"></script>
+    <script>
+    (function() {
+        var menuEl = document.getElementById('ml-menu'),
+            mlmenu = new MLMenu(menuEl, {
+                // breadcrumbsCtrl : true, // show breadcrumbs
+                // initialBreadcrumb : 'all', // initial breadcrumb text
+                backCtrl : false, // show back button
+                // itemsDelayInterval : 60, // delay between each menu item sliding animation
+                //onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+            });
 
-        <nav class="submenu">
-              <ul class="nav navbar-top-links navbar-right">
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-messages">
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                <span class="pull-right text-muted">
-                                    <em>Yesterday</em>
-                                </span>
-                            </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                <span class="pull-right text-muted">
-                                    <em>Yesterday</em>
-                                </span>
-                            </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                <span class="pull-right text-muted">
-                                    <em>Yesterday</em>
-                                </span>
-                            </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a class="text-center" href="#">
-                            <strong>Read All Messages</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.dropdown-messages -->
-            </li>
-            <!-- /.dropdown -->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-tasks">
-                    <li>
-                        <a href="#">
-                            <div>
-                                <p>
-                                    <strong>Task 1</strong>
-                                    <span class="pull-right text-muted">40% Complete</span>
-                                </p>
-                                <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                        <span class="sr-only">40% Complete (success)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <p>
-                                    <strong>Task 2</strong>
-                                    <span class="pull-right text-muted">20% Complete</span>
-                                </p>
-                                <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                        <span class="sr-only">20% Complete</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <p>
-                                    <strong>Task 3</strong>
-                                    <span class="pull-right text-muted">60% Complete</span>
-                                </p>
-                                <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                        <span class="sr-only">60% Complete (warning)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <p>
-                                    <strong>Task 4</strong>
-                                    <span class="pull-right text-muted">80% Complete</span>
-                                </p>
-                                <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                        <span class="sr-only">80% Complete (danger)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a class="text-center" href="#">
-                            <strong>See All Tasks</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.dropdown-tasks -->
-            </li>
-            <!-- /.dropdown -->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-alerts">
-                    <li>
-                        <a href="#">
-                            <div>
-                                <i class="fa fa-comment fa-fw"></i> New Comment
-                                <span class="pull-right text-muted small">4 minutes ago</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                <span class="pull-right text-muted small">12 minutes ago</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                <span class="pull-right text-muted small">4 minutes ago</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <i class="fa fa-tasks fa-fw"></i> New Task
-                                <span class="pull-right text-muted small">4 minutes ago</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                <span class="pull-right text-muted small">4 minutes ago</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a class="text-center" href="#">
-                            <strong>See All Alerts</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.dropdown-alerts -->
-            </li>
-            <!-- /.dropdown -->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                    </li>
-                </ul>
-                <!-- /.dropdown-user -->
-            </li>
-            <!-- /.dropdown -->
-        </ul>      
+        // mobile menu toggle
+        var openMenuCtrl = document.querySelector('.action--open'),
+            closeMenuCtrl = document.querySelector('.action--close');
+
+        openMenuCtrl.addEventListener('click', openMenu);
+        closeMenuCtrl.addEventListener('click', closeMenu);
+
+        function openMenu() {
+            classie.add(menuEl, 'menu--open');
+        }
+
+        function closeMenu() {
+            classie.remove(menuEl, 'menu--open');
+        }
+
         
-        </nav>
-            <!-- /.sidebar-collapse -->
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
+        
+    })();
+    </script>
