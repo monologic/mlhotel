@@ -1,17 +1,108 @@
    <!-- Navigation -->
-    <nav class="navbar  navbar-static-top nv" role="navigation" style="margin-bottom: 0">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"><p class="tit">Residencial Moquegua</p></a>
-        </div>
-        <!-- /.navbar-header -->
+    <nav class=" sidebar pr" role="navigation">
+            <div class="sidebar-nav navbar-collapse panel">
+            
+                <div class="logo">
+                    <img src="../plugins/img/logo.png">
+                </div>
+                
+                <a href="#/"><h4 class="text-center color2">Panel de Control</h4></a>
+                <ul class="nav" id="side-menu">
+                     <li class="apa">
+                        <a href="#" class="color"><i class="fa fa-edit "></i> Reservas</a>
+                  
+                        <!-- /.nav-second-level -->
+                    </li>   
 
-        <ul class="nav navbar-top-links navbar-right">
+                     <li class="apa">
+                        <a href="#" class="color"><i class="fa fa-folder-open fa-fw"></i> Registro<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level sub">
+                            <li class="">
+                                <a href="#/flot" class="color"> <i class="fa fa-eye fa-fw"></i> Registros</a>
+                            </li>
+                            <li class="">
+                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Nuevo Registro</a>
+                            </li>
+                            
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+
+                    <li class="apa">
+                        <a href="#"class="color"><i class="fa fa-user fa-fw"></i> Clientes<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level sub">
+                            <li>
+                                <a href="#/flot" class="color"> <i class="fa fa-male fa-fw"></i> Clientes Registrados</a>
+                            </li>
+                            <li>
+                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Nuevo Cliente</a>
+                            </li>
+                            <li>
+                                <a href="#/morris" class="color"><i class="fa fa-search fa-fw"></i> Busqueda de Clientes</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                   
+                    <li class="apa">
+                        <a href="#" class="color"><i class="fa fa-tags fa-fw"></i> Habitaciones<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level sub">
+                            <li>
+                                <a href="#/flot" class="color"> <i class="fa fa-male fa-fw"></i> Estado de Habitaciones</a>
+                            </li>
+                            <li>
+                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Nueva Habitacion</a>
+                            </li>
+                            <li>
+                                <a href="#/morris" class="color"><i class="fa fa-share-alt fa-fw"></i> Tipo de Habitaciones</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+
+                    <li class="apa">
+                        <a href="#" class="color"><i class="fa fa-cutlery fa-fw"></i> Servicios<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level sub">
+                           <li>
+                                <a href="#/morris" class="color"><i class="fa fa-share-alt fa-fw"></i> Tipo de Servicios</a>
+                            </li>
+                            <li>
+                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Agregar Servicio</a>
+                            </li>
+                            
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>  
+
+                    <li class="apa">
+                        <a href="#" class="color"><i class="fa fa-group fa-fw"></i> Empleados<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level sub">
+                            <li>
+                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Agregar Empleado</a>
+                            </li>
+                            
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>    
+
+                    <li class="apa">
+                        <a href="#" class="color"><i class="fa fa-key fa-fw"></i> Usuarios<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level sub">
+                            <li>
+                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Agregar Servicio</a>
+                            </li>
+                            
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>      
+
+                   
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="submenu">
+              <ul class="nav navbar-top-links navbar-right">
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                     <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
@@ -218,108 +309,10 @@
                 <!-- /.dropdown-user -->
             </li>
             <!-- /.dropdown -->
-        </ul>
-        <!-- /.navbar-top-links -->
-
-        <div class="navbar-fixed sidebar pr" role="navigation">
-            <div class="sidebar-nav navbar-collapse panel">
-                <a href="#/"><h3 class="text-center color2">Panel de Control</h3></a>
-                <ul class="nav" id="side-menu">
-                     <li class="apa">
-                        <a href="#" class="color"><i class="fa fa-edit "></i> Reservas</a>
-                  
-                        <!-- /.nav-second-level -->
-                    </li>   
-
-                     <li class="apa">
-                        <a href="#" class="color"><i class="fa fa-folder-open fa-fw"></i> Registro<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level sub">
-                            <li class="">
-                                <a href="#/flot" class="color"> <i class="fa fa-eye fa-fw"></i> Registros</a>
-                            </li>
-                            <li class="">
-                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Nuevo Registro</a>
-                            </li>
-                            
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-                    <li class="apa">
-                        <a href="#"class="color"><i class="fa fa-user fa-fw"></i> Clientes<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level sub">
-                            <li>
-                                <a href="#/flot" class="color"> <i class="fa fa-male fa-fw"></i> Clientes Registrados</a>
-                            </li>
-                            <li>
-                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Nuevo Cliente</a>
-                            </li>
-                            <li>
-                                <a href="#/morris" class="color"><i class="fa fa-search fa-fw"></i> Busqueda de Clientes</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                   
-                    <li class="apa">
-                        <a href="#" class="color"><i class="fa fa-tags fa-fw"></i> Habitaciones<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level sub">
-                            <li>
-                                <a href="#/flot" class="color"> <i class="fa fa-male fa-fw"></i> Estado de Habitaciones</a>
-                            </li>
-                            <li>
-                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Nueva Habitacion</a>
-                            </li>
-                            <li>
-                                <a href="#/morris" class="color"><i class="fa fa-share-alt fa-fw"></i> Tipo de Habitaciones</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-                    <li class="apa">
-                        <a href="#" class="color"><i class="fa fa-cutlery fa-fw"></i> Servicios<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level sub">
-                           <li>
-                                <a href="#/morris" class="color"><i class="fa fa-share-alt fa-fw"></i> Tipo de Servicios</a>
-                            </li>
-                            <li>
-                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Agregar Servicio</a>
-                            </li>
-                            
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>  
-
-                    <li class="apa">
-                        <a href="#" class="color"><i class="fa fa-group fa-fw"></i> Empleados<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level sub">
-                            <li>
-                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Agregar Empleado</a>
-                            </li>
-                            
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>    
-
-                    <li class="apa">
-                        <a href="#" class="color"><i class="fa fa-key fa-fw"></i> Usuarios<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level sub">
-                            <li>
-                                <a href="#/flot" class="color"> <i class="fa fa-plus fa-fw"></i> Agregar Servicio</a>
-                            </li>
-                            
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>      
-
-                   
-                </ul>
-            </div>
+        </ul>      
+        
+        </nav>
             <!-- /.sidebar-collapse -->
-        </div>
-        <!-- /.navbar-static-side -->
-    </nav>
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="js/plugins/metisMenu/metisMenu.min.js"></script>

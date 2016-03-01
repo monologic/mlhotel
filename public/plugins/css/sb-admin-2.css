@@ -11,13 +11,15 @@ body {
 
 #wrapper {
     width: 100%;
+    background-color: white;
 
 }
 
 #page-wrapper {
+    
+    top:20px;
     padding: 10px;
     min-height: 600px;
-    background-color:rgb(230,230,230);
 }
 
 @media(min-width:768px) {
@@ -25,7 +27,8 @@ body {
         position: inherit;
         margin: 0 0 0 250px;
         padding: 0 30px;
-        border-left: 1px solid #e7e7e7;
+        border-left: 0px solid #e7e7e7;
+        top:0;
     }
 }
 
@@ -88,8 +91,9 @@ body {
     padding-left: 0;
     padding-bottom: 15px;
     height: 100%;
-    background-color: rgb(44, 115, 200);
+    background-color:rgb(50,50,50);
     padding-top: 10px;
+    top:0;
 }
 
 .sidebar .sidebar-search {
@@ -131,11 +135,11 @@ body {
 
 @media(min-width:768px) {
     .sidebar {
-        z-index: 1;
+        z-index: 2;
         display: block;
         position: absolute;
         width: 250px;
-        margin-top: 51px;
+        margin-top: 0px;
     }
 
     .navbar-top-links .dropdown-messages,
@@ -373,15 +377,26 @@ table.dataTable thead .sorting:after {
 .sub{
     display: none;
 }
-.apa:hover ul{
+.apa:hover{
+
+    background-color: none;
+
+}
+.apa:hover ul,
+.apa:focus ul{
     display: block;
     position: relative;
+    background-color: green;
 }
 .color{
     color: white;
 }
 .color2{
-    margin: 25px;
+    margin: 10px;
+    color: white;
+}
+.color3{
+    font-size: 2rem;
     color: white;
 }
 .apa{
@@ -396,7 +411,11 @@ i{
 
     background-color: white;
     position: relative;
-    top: 20px;
+    border: solid;
+    border-radius: 7px;
+    border-width: 1px;
+    border-color: rgb(240,240,240);
+    top: 80px;
     padding: 20px;
     border-radius: 5px;
 
@@ -415,16 +434,33 @@ i{
 .tit{
    color: rgb(44, 115, 200);
 }
+
 .pr{
     display: block;
     position: fixed;
     height: 100%;
     border-radius: 0px;
-
+    top:0;
 }
 .nv{
     top:0;
     position: fixed;
     background-color: black;
     width: 100%;
+}
+.submenu{
+    display: inline-block;
+    position: fixed;
+    top:0;
+    background-color: rgba(200,200,200,0.8);
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+
+}
+.logo img{
+
+    width: 120px;
+    height: 100px;
+    margin-left:65px;
 }
