@@ -23,6 +23,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- food icons -->
     <link rel="stylesheet" type="text/css" href="plugins/multilevel/css/organicfoodicons.css" />
+     <link rel="stylesheet" type="text/css" href="plugins/css/kira.css" />
     <!-- demo styles -->
 
     <link rel="stylesheet" type="text/css" href="plugins/multilevel/css/demo.css" />
@@ -45,19 +46,19 @@
             <button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
             <div class="menu__wrap">
                 <ul data-menu="main" class="menu__level">
-                    <li class="menu__item"><a class="menu__link" href="dashboard.html">Panel de Control</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Empleado</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Reservas</a></li>  
                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-2" href="#">Reservas</a></li>
                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-3" href="#">Habitaciones</a></li>
                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-4" href="#">Clientes</a></li>
                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-5" href="#">Servicios</a></li>
                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-6" href="#">Usuarios</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Empleado</a></li>
                 </ul>
                 <!-- Submenu 1 -->
                 <ul data-menu="submenu-1" class="menu__level">
                     <li class="menu__item"><a class="menu__link" href="#">Ver Empleados</a></li>
                     <li class="menu__item"><a class="menu__link" href="#">Crear Empleado</a></li>
-                    <li role="separator" class="divider"></li>
+                    <li role="separador" class="menu__item"><a class="menu__separador" href="#"></a></li>
                     <li class="menu__item"><a class="menu__link" href="#">Ver Cargos</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/Cargos/crear">Crear Cargo</a></li>
                 </ul>

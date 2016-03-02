@@ -15,6 +15,7 @@
 	font-variant: normal;
 	line-height: 1;
 	text-transform: none;
+	color: black;ç
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -43,6 +44,8 @@
 	width: 300px;
 	height: calc(100vh - 120px);
 	background: #1c1d22;
+	font-size: 1.6rem;
+
 }
 
 .menu__wrap {
@@ -98,7 +101,23 @@
 .menu__link:hover,
 .menu__link[data-submenu]:hover::after {
 	color: #5c5edc;
+	list-style: none;
+	text-decoration: none;
 }
+
+.menu__separador{		
+
+	  display: block;
+	  height: 1px;
+	  left: 25%;
+	  margin: 9px 0;
+	  overflow: hidden;
+	  background-color: #e5e5e5;
+	  cursor:default;
+	  width: 100%;
+
+}
+
 
 .menu__link--current::before {
 	content: '\00B7';
@@ -109,6 +128,7 @@
 	left: 0.5em;
 	height: 4px;
 	color: #5c5edc;
+	text-decoration: none;
 }
 
 [class^='animate-'],
@@ -221,10 +241,10 @@
 }
 
 .menu__breadcrumbs {
-	font-size: 0.65em;
+	font-size: 0.9em;
 	line-height: 1;
 	position: relative;
-	padding: 2.5em 3.75em 1.5em 2.5em;
+	padding: 2em 3.7em 1.5em 1.5em;
 }
 
 .menu__breadcrumbs a {
@@ -243,6 +263,7 @@
 
 .menu__breadcrumbs a:hover {
 	color: #8182e0;
+
 }
 
 .menu__breadcrumbs a:not(:last-child)::after {
