@@ -1,9 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
 *{
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
 	list-style: none;
+}
+.contenidogrande{
+	width: 100%;
 }
 .tit{
 	font-size: 4rem;
@@ -54,4 +58,37 @@
 	float: right;
 	z-index: 5;
 	background-color: rgba(40,40,40,0.5);
+}
+.tit2{
+	color: #428bca;	
+	font-size: 2.7rem;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+}
+.formularios{
+	display: flex;
+	padding: 0px;
+	color: rgb(60,60,60);
+	
+}
+.inputs{
+	margin:auto;
+}
+.inputs a span{
+	
+	font-size: 6rem;
+	color: #428bca;	
+}
+.inputs a p{
+	font-size: 1.4rem;
+	color: #428bca;	
+	font-family: 'Ubuntu', sans-serif;
+}
+
+form{
+	display: block;
+	width: 50%;
+	color: #428bca;	
+	font-family: 'Montserrat', sans-serif;
 }

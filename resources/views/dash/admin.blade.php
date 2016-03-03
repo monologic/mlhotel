@@ -46,18 +46,18 @@
             <button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
             <div class="menu__wrap">
                 <ul data-menu="main" class="menu__level">
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Reservas</a></li>  
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-2" href="#">Reservas</a></li>
+                    <li class="menu__item"><a class="menu__link"  href="#">Reservas</a></li>  
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-2" href="#">Registrar</a></li>
                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-3" href="#">Habitaciones</a></li>
                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-4" href="#">Clientes</a></li>
                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-5" href="#">Servicios</a></li>
                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-6" href="#">Usuarios</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Empleado</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-7" href="#">Empleado</a></li>
                 </ul>
                 <!-- Submenu 1 -->
                 <ul data-menu="submenu-1" class="menu__level">
                     <li class="menu__item"><a class="menu__link" href="#">Ver Empleados</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Crear Empleado</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#/Empleados/crear">Crear Empleado</a></li>
                     <li role="separador" class="menu__item"><a class="menu__separador" href="#"></a></li>
                     <li class="menu__item"><a class="menu__link" href="#">Ver Cargos</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/Cargos/crear">Crear Cargo</a></li>
@@ -106,6 +106,21 @@
                     <li class="menu__item"><a class="menu__link" href="#">Amino Acid Heaven</a></li>
                     <li class="menu__item"><a class="menu__link" href="#">Allergy Free</a></li>
                 </ul>
+
+                <ul data-menu="submenu-6" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Ver Usuarios</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#/Usuarios/crear">Crear Usuarios</a></li>
+                    <li role="separador" class="menu__item"><a class="menu__separador" href="#"></a></li>
+                    <li class="menu__item"><a class="menu__link" href="#/Usuarios/crearTipo">Agregar tipo usuario</a></li>
+                </ul>
+
+                 <ul data-menu="submenu-7" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Ver Empleados</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#/Empleados/crear">Crear Empleado</a></li>
+                    <li role="separador" class="menu__item"><a class="menu__separador" href="#"></a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Ver Cargos</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#/Cargos/crear">Crear Cargo</a></li>
+                </ul>
             </div>
         </nav>
     
@@ -129,7 +144,9 @@
 
     <!-- Controladrores de Angular -->
 
-    <script src="plugins/js/controllers/cargoController.js"></script>    
+    <script src="plugins/js/controllers/cargoController.js"></script>  
+    <script src="plugins/js/controllers/empleadoController.js"></script>  
+    <script src="plugins/js/controllers/usuariotipoController.js"></script> 
 
 
     <script>

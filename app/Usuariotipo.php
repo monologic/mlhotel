@@ -8,6 +8,9 @@ class Usuariotipo extends Model
 {
     public $timestamps = false;
 
+     protected $fillable = [
+        'nombre' ];
+
     public function usuarios()
     {
     	return $this->hasMany('App\Usuario');

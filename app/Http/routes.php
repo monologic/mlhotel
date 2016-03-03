@@ -17,6 +17,8 @@ Route::group(['prefix'=> 'admin'], function(){
 	}]);
 
 	Route::resource('emptipo', 'EmptipoController');
+	Route::resource('empleado', 'empleadoController');
+	Route::resource('usuariotipo', 'usuariotipoController');
 
 
 	
