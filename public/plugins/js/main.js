@@ -23,8 +23,8 @@ app.config(['$routeProvider', function ($routeProvider) {
     */
     .when("/Cargos/crear", {templateUrl: "partials/emptipo/crear.html", controller: "PageCtrl"})
     .when("/Empleados/crear", {templateUrl: "partials/empleado/crear.html", controller: "PageCtrl"})
-    .when("/Usuario/crear", {templateUrl: "partials/usuario/crear.html", controller: "PageCtrl"})
-    .when("/Usuario/crear", {templateUrl: "partials/usuariotipo/crear.html", controller: "PageCtrl"})
+    .when("/Usuarios/crear", {templateUrl: "partials/usuario/crear.html", controller: "PageCtrl"})
+    .when("/Usuarios/crearTipo", {templateUrl: "partials/usuariotipo/crear.html", controller: "PageCtrl"})
 
     // else 404
     .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});

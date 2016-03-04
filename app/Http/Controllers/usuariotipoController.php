@@ -6,10 +6,16 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+
 use App\Usuariotipo;
 
-class usuario extends Controller
+class UsuariotipoController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         //
@@ -33,13 +39,12 @@ class usuario extends Controller
      */
     public function store(Request $request)
     {
-        $usuariotipo = new Usuariotipo($request->all());
-        $usuariotipo->save();
+        $usuarioTipo = new Usuariotipo($request->all());
+        $usuarioTipo->save();
 
         return response()->json([
             "mensaje" => 'Creado'
         ]);
-        
     }
 
     /**
@@ -85,5 +90,12 @@ class usuario extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getUsuarioTipos()
+    {
+        $usuarioTipos = Usuariotipo::all();
+        
+        return response()->json( $usuarioTipos->toArray() );
     }
 }

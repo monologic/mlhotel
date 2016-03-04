@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Emptipo;
+use App\Usuario;
 
-class EmptipoController extends Controller
+class UsuarioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +18,7 @@ class EmptipoController extends Controller
      */
     public function index()
     {
-        
+        //
     }
 
     /**
@@ -39,13 +39,13 @@ class EmptipoController extends Controller
      */
     public function store(Request $request)
     {
-        $emptipo = new Emptipo($request->all());
-        $emptipo->save();
+        $usuario = new Usuario($request->all());
+        $usuario->password = bcrypt($request->password);
+        $usuario->save();
 
         return response()->json([
-            "mensaje" => 'Creado'
+            "mensaje" => 'Usuario Creado'
         ]);
-        
     }
 
     /**
@@ -91,13 +91,5 @@ class EmptipoController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-   
-    public function getEmptipos()
-    {
-        $emptipos = Emptipo::all();
-        
-        return response()->json( $emptipos->toArray() );
     }
 }

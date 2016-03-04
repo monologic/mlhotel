@@ -2,11 +2,13 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Usuario extends Model
+class Usuario extends Authenticatable
 {
     public $timestamps = false;
+
+    protected $fillable = ['empleado_id', 'usuario', 'password', 'usuariotipo_id'];
     
     public function empleado()
    	{

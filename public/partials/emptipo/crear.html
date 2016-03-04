@@ -2,7 +2,8 @@
 <br><br>
 <label>{{mensaje}}</label>
    
-    <h3 class="tit2">Crear Cargo</h3>
+    <h3 class="text-center tit2">Crear Cargo</h3>
+    <div class="formularios">    
     <form>
         <div class="form-group">
             <label for="tipo">Cargo</label>
@@ -13,7 +14,10 @@
             <input type="text" class="form-control" id="descripcion" placeholder="Descripción del cargo" ng-model="descripcion">
         </div>
         
-        <button class="btn btn-default" ng-click="enviar();">Submit</button>
+        <div class="inputs">
+            <a href="" ng-click="enviar();"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><p>Guardar</p> </a> <br><br>
+        </div>
     </form>
+    </div>
 
 </div>

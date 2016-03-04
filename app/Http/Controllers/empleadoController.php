@@ -88,4 +88,36 @@ class empleadoController extends Controller
     {
         //
     }
+
+    public function getEmpleadosParaUsuarios($value='')
+    {
+        // Los Tipos de empleado aptos para ser usuarios
+        $emptipos = Emptipo::select('id')->where('tipo', 'LIKE', 'Administrador')
+                    ->orWhere('tipo', 'LIKE', 'Recepcionista')
+                    ->get()
+                    ->lists('id');
+
+        //Los empleados aptos para ser usuarios
+        
+        $empleados = array();
+
+        for ($i = 0 ; $i < count($emptipos) ; $i++) { 
+        
+            $e = Empleado::where('emptipo_id', '=', $emptipos[$i])
+                        ->get();
+
+            $e->each(function($e){
+                $e->emptipo;
+            });
+
+            $e = $e->toArray();
+
+            for ($j = 0; $j < count($e); $j++) { 
+                array_push($empleados, $e[$j]);
+            }   
+        }
+
+        return response()->json( $empleados );
+        
+    }
 }

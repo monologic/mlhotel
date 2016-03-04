@@ -10,7 +10,7 @@
 |
 */
 
-Route::group(['prefix'=> 'admin'], function(){
+Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 
 	Route::get('/', ['as' => 'admin', function () {
 		return view('dash.admin');
@@ -18,12 +18,19 @@ Route::group(['prefix'=> 'admin'], function(){
 
 	Route::resource('emptipo', 'EmptipoController');
 	Route::resource('empleado', 'empleadoController');
-	Route::resource('usuariotipo', 'usuariotipoController');
+	Route::resource('usuariotipo', 'UsuariotipoController');
+	Route::resource('usuario', 'UsuarioController');
 
-
-	
+	Route::get('getEmptipos', 'EmptipoController@getEmptipos');
+	Route::get('getEmpForUsers', 'empleadoController@getEmpleadosParaUsuarios');
+	Route::get('getUsuarioTipos', 'UsuariotipoController@getUsuarioTipos');
 
 });
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +45,10 @@ Route::group(['prefix'=> 'admin'], function(){
 Route::group(['middleware' => ['web']], function () {
     //
 });
+
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
+
     Route::get('/home', 'HomeController@index');
 });
+

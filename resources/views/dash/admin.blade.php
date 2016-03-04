@@ -147,7 +147,7 @@
     <script src="plugins/js/controllers/cargoController.js"></script>  
     <script src="plugins/js/controllers/empleadoController.js"></script>  
     <script src="plugins/js/controllers/usuariotipoController.js"></script> 
-
+    <script src="plugins/js/controllers/usuarioController.js"></script> 
 
     <script>
     (function() {
