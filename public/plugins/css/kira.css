@@ -12,7 +12,7 @@
 .tit{
 	font-size: 4rem;
 	margin-top:100px;
-	color: rgb(90,90,90);
+	color: #446CB3;
 }
 .contenedor{
 	margin: auto;
@@ -31,10 +31,11 @@
 	width: 150px;
 	height: 150px;
 	margin: 20px;
+	color: #3A539B;
 
 }
 .objeto:hover{
-	background-color:rgb(66, 92, 218);
+	background-color:#446CB3;
 	color: white;
 }
 .superior{
@@ -48,21 +49,13 @@
 	font-size: 1.6rem;
 }
 .objeto div span{
-	font-size: 7rem;
+	font-size: 5rem;
 	margin-top:25px;
-}
-.notificacion{
-	display: inline-block;
-	position: fixed;
-	top: 0;
-	float: right;
-	z-index: 5;
-	background-color: rgba(40,40,40,0.5);
 }
 .tit2{
 	color: #428bca;	
 	font-size: 2.7rem;
-	margin-bottom: 20px;
+	margin-top:40px;
 	font-weight: bold;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -87,8 +80,36 @@
 }
 
 form{
+	margin-top: 25px;
 	display: block;
 	width: 50%;
-	color: #428bca;	
+	color:#4183D7;;	
 	font-family: 'Montserrat', sans-serif;
+	margin-left: 50px;
 }
+
+.submenu{
+	display: inline-block;
+	position: relative;
+	background-color: transparent;
+	width: 100%;
+	right: 0;
+	height: 50px;
+	padding-right: 50px;
+	background-color: transparent;
+}
+.fix{
+	display: inline-block;
+	position: fixed;
+	top: 0;
+	width:100%;
+	right: 0;
+	z-index: 50;
+
+}
+li a span{
+	font-size: 1.8rem;
+	color:#446CB3;
+}
+
+

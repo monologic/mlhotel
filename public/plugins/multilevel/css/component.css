@@ -45,6 +45,7 @@
 	height: calc(100vh - 120px);
 	background: #1c1d22;
 	font-size: 1.6rem;
+	z-index: 100;
 
 }
 

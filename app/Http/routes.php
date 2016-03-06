@@ -9,6 +9,10 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+	Route::get('/', function () {
+    return view('home.index');
+});
+
 
 Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 
@@ -27,9 +31,6 @@ Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 /*

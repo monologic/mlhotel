@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blueprint: Multi-Level Menu</title>
+    <title>Administrador</title>
     <meta name="description" content="Blueprint: A basic template for a responsive multi-level menu" />
     <meta name="keywords" content="blueprint, template, html, css, menu, responsive, mobile-friendly" />
     <meta name="author" content="Codrops" />
@@ -14,11 +14,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
+    
+    <link rel="stylesheet" type="text/css" href="plugins/css/bootstrap.css" />
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- food icons -->
@@ -123,7 +122,30 @@
                 </ul>
             </div>
         </nav>
-    
+        <!-- sub menu de cabezera --> 
+        <div class="fix">
+           <nav class="submenu">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                   <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" ><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span></a></li>
+                   <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                  </ul>
+                </div>
+                <!-- /.dropdown-messages -->
+        </nav> 
+        </div>
+       
+
         <div class="content">
 
             <div ng-view></div>
@@ -136,11 +158,13 @@
 
 
         <!-- Our Website Javascripts -->
+
     <script src="{{ asset('plugins/js/main.js') }}"></script>
     <!-- /view -->
     <script src="plugins/multilevel/js/classie.js"></script>
     <script src="plugins/multilevel/js/dummydata.js"></script>
     <script src="plugins/multilevel/js/main.js"></script>
+    <script src="plugins/js/ui-bootstrap-tpls-1.2.2.min.js.js"></script>
 
     <!-- Controladrores de Angular -->
 

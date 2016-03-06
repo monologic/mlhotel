@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="plugins/css/bootstrap-kira.css" />
+     <link rel="stylesheet" type="text/css" href="plugins/UI-bootstrap/ui-bootstrap-csp.css" />
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <style>
@@ -25,7 +26,7 @@
         }
     </style>
 </head>
-<body id="app-layout">
+<body ng-app="homeApp">
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
@@ -46,16 +47,12 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -71,12 +68,37 @@
             </div>
         </div>
     </nav>
-
+  
     @yield('content')
 
-    <!-- JavaScripts -->
+   <div class="content">
+
+            <div ng-view></div>
+
+        </div>
+
+     <!-- Llamado a angular-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+   
+    <!-- Angular-Bootrstrap UI --> 
+     <script src="plugins/UI-bootstrap/ui-bootstrap-tpls.js"></script>
+     <script src="plugins/UI-bootstrap/ui-bootstrap.js"></script>
+
+
+     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+
+    <!--JS principal -->
+    <script src="{{ asset('plugins/js/mainHome.js') }}"></script>
+
+    <!--Controladores conectados a la web -->
+
+    <script src="plugins/js/controllers/CarouselController.js"></script>  
+
+
 </body>
 </html>
