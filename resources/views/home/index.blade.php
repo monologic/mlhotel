@@ -12,19 +12,11 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
+    <link rel="stylesheet" href="index/css/reset.css">
+    <link rel="stylesheet" href="index/css/style.css">
+
     <link rel="stylesheet" type="text/css" href="plugins/css/bootstrap-kira.css" />
-     <link rel="stylesheet" type="text/css" href="plugins/UI-bootstrap/ui-bootstrap-csp.css" />
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
-
-    <style>
-        body {
-            font-family: 'Lato';
-        }
-
-        .fa-btn {
-            margin-right: 6px;
-        }
-    </style>
+  
 </head>
 <body ng-app="homeApp">
     <nav class="navbar navbar-default">
@@ -83,21 +75,17 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
    
     <!-- Angular-Bootrstrap UI --> 
-     <script src="plugins/UI-bootstrap/ui-bootstrap-tpls.js"></script>
-     <script src="plugins/UI-bootstrap/ui-bootstrap.js"></script>
 
-
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
      <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 
     <!--JS principal -->
     <script src="{{ asset('plugins/js/mainHome.js') }}"></script>
 
     <!--Controladores conectados a la web -->
 
-    <script src="plugins/js/controllers/CarouselController.js"></script>  
+    <script src="plugins/js/controllers/CarouselDemoCtrl.js"></script>  
 
 
 </body>

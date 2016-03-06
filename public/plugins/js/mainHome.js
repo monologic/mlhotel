@@ -3,6 +3,11 @@
   'ngRoute'
 ]);
 
+  var slider = angular.module('app', [
+  'ngRoute'
+]);
+
+
 /**
  * Configure the Routes
  */
@@ -26,6 +31,10 @@ app.config(['$routeProvider', function ($routeProvider) {
  * Controls all other Pages
  */
 app.controller('PageCtrl', function (/* $scope, $location, $http */) {
+  console.log("Page Controller reporting for duty(reconocio el controlador).");
+
+});
+slider.controller('PageCtrl', function (/* $scope, $location, $http */) {
   console.log("Page Controller reporting for duty(reconocio el controlador).");
 
 });
