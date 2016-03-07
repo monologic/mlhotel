@@ -52,6 +52,8 @@
                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-5" href="#">Servicios</a></li>
                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-6" href="#">Usuarios</a></li>
                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-7" href="#">Empleado</a></li>
+
+                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-8" href="#">Adminstrador</a></li>
                 </ul>
                 <!-- Submenu 1 -->
                 <ul data-menu="submenu-1" class="menu__level">
@@ -119,6 +121,14 @@
                     <li role="separador" class="menu__item"><a class="menu__separador" href="#"></a></li>
                     <li class="menu__item"><a class="menu__link" href="#">Ver Cargos</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/Cargos/crear">Crear Cargo</a></li>
+                </ul>
+
+                 <ul data-menu="submenu-8" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Control Banner</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#/Empleados/crear">Control Tipos de Habitaciones</a></li>
+                    <li role="separador" class="menu__item"><a class="menu__separador" href="#"></a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Hotel</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#/Cargos/crear">Crear Cargos</a></li>
                 </ul>
             </div>
         </nav>
