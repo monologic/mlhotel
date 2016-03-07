@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
+use Illuminate\Support\Facades\Auth;
+
 class AuthController extends Controller
 {
     /*
@@ -71,5 +73,16 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+
+    protected function authenticated()
+    {
+        Auth::user()->empleado;
+        Auth::user()->empleado->hotel;
+
+        Auth::user()->usuariotipo;
+
+        return redirect()->intended($this->redirectPath());
     }
 }

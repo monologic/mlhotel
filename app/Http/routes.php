@@ -16,9 +16,7 @@
 
 Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 
-	Route::get('/', ['as' => 'admin', function () {
-		return view('dash.admin');
-	}]);
+    Route::get('/', 'PanelController@index');
 
 	Route::resource('emptipo', 'EmptipoController');
 	Route::resource('empleado', 'empleadoController');
