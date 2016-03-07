@@ -1,0 +1,26 @@
+<div id="page-wrapper" ng-controller="hotelController" ng-init="getHoteles();">
+
+    <h3 class="tit2">Hoteles</h3>
+
+    <table class="table table-hover">
+    	<thead>
+    		<tr>
+    			<th>#</th>
+    			<th>Nombre del Hotel</th>
+    			<th>Administrador</th>
+    		</tr>
+    	</thead>
+    	<tbody>
+    		<tr ng-repeat="x in hoteles">
+			    <td>{{$index+1}}</td>
+                <td>{{x.nombre}}</td>
+                <td>{{x.administrador}}</td>
+                <td>
+                	<button ng-click="mostrarDatos1($index);" class="btn btn-success">E</button>
+                	<button ng-click="eliminar(x.id);" class="btn btn-danger">X</button>
+                </td>
+			  </tr>
+    	</tbody>
+
+  	</table>
+</div>

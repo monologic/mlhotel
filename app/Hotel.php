@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Hotel extends Model
 {
 	public $timestamps = false;
+
+    protected $fillable = ['nombre', 'pais', 'region_estado','ciudad','direccion', 'administrador'];
 	
     public function habsubtipos()
     {

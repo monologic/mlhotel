@@ -22,10 +22,13 @@ Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 	Route::resource('empleado', 'empleadoController');
 	Route::resource('usuariotipo', 'UsuariotipoController');
 	Route::resource('usuario', 'UsuarioController');
+	Route::resource('hotel', 'HotelController');
 
 	Route::get('getEmptipos', 'EmptipoController@getEmptipos');
 	Route::get('getEmpForUsers', 'empleadoController@getEmpleadosParaUsuarios');
 	Route::get('getUsuarioTipos', 'UsuariotipoController@getUsuarioTipos');
+	Route::get('getHoteles', 'HotelController@getHoteles');
+
 
 });
 

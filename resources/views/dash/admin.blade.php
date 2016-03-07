@@ -127,7 +127,7 @@
                     <li class="menu__item"><a class="menu__link" href="#">Control Banner</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/Empleados/crear">Control Tipos de Habitaciones</a></li>
                     <li role="separador" class="menu__item"><a class="menu__separador" href="#"></a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Hotel</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#/Hoteles">Hotel</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/Cargos/crear">Crear Cargos</a></li>
                 </ul>
             </div>
@@ -181,6 +181,7 @@
     <script src="plugins/js/controllers/empleadoController.js"></script>  
     <script src="plugins/js/controllers/usuariotipoController.js"></script> 
     <script src="plugins/js/controllers/usuarioController.js"></script> 
+    <script src="plugins/js/controllers/hotelController.js"></script> 
 
     <script>
     (function() {
