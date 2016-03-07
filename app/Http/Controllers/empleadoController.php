@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+
+use Illuminate\Support\Facades\Auth;
+
 use App\Empleado;
 use App\Emptipo;
 
@@ -36,6 +39,7 @@ class empleadoController extends Controller
     public function store(Request $request)
     {
         $empleado = new Empleado($request->all());
+        $empleado->hotel_id = Auth::user()->empleado->hotel->id;
         $empleado->save();
 
         return response()->json([
@@ -89,8 +93,11 @@ class empleadoController extends Controller
         //
     }
 
-    public function getEmpleadosParaUsuarios($value='')
+    public function getEmpleadosParaUsuarios()
     {
+        //id del hotel del usuario actualmente.
+        $hotel = Auth::user()->empleado->hotel->id;
+
         // Los Tipos de empleado aptos para ser usuarios
         $emptipos = Emptipo::select('id')->where('tipo', 'LIKE', 'Administrador')
                     ->orWhere('tipo', 'LIKE', 'Recepcionista')
@@ -103,8 +110,10 @@ class empleadoController extends Controller
 
         for ($i = 0 ; $i < count($emptipos) ; $i++) { 
         
-            $e = Empleado::where('emptipo_id', '=', $emptipos[$i])
-                        ->get();
+            $e = Empleado::where([
+                    ['hotel_id', $hotel],
+                    ['emptipo_id', $emptipos[$i]],
+                ])->get();
 
             $e->each(function($e){
                 $e->emptipo;

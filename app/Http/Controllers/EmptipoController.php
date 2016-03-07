@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Illuminate\Support\Facades\Auth;
+
 use App\Emptipo;
 
 class EmptipoController extends Controller
@@ -96,6 +98,7 @@ class EmptipoController extends Controller
    
     public function getEmptipos()
     {
+        
         $emptipos = Emptipo::all();
         
         return response()->json( $emptipos->toArray() );

@@ -41,9 +41,6 @@ Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-Route::group(['middleware' => ['web']], function () {
-    //
-});
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();

@@ -1,0 +1,12 @@
+Especificaciones del Sistema:
+
+Glosario:
+Administrador del Sistema: Es la persona que tiene acceso a todo el sistema de todos 				los hoteles (sucursales), es el único que puede crear hoteles, asignar 					administradores y crear los cargos.
+
+Administrador del hotel(sucursal): El administrador solo tendrá acceso a la información 			del hotel que se le fue asignado.
+
+1. Los cargos son creados por el administrador general
+
+Cargos y hoteles
+Asignar administrador de hotel
+Sistema Gestor de Contenido

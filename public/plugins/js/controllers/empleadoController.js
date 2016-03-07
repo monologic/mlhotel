@@ -9,8 +9,8 @@ app.controller('empleadoController', function($scope,$http) {
                 'dni':$scope.dni,
                 'direccion':$scope.direccion,
                 'celular':$scope.celular,
-                'emptipo_id':$('#emptipo_id').val(),
-                'hotel_id':"1"
+                'emptipo_id':$('#emptipo_id').val()
+                //'hotel_id':$('#hotel_id').text()
             }).then(function successCallback(response) {
                 $scope.mensaje = response.data.mensaje;
             }, function errorCallback(response) {

@@ -1,0 +1,43 @@
+<div id="page-wrapper" ng-controller="empleadoController" ng-init="getEmptipos();">
+    <label>{{mensaje}}</label>
+
+    <h3 class="text-center tit2">Registro de Hoteles</h3>
+    <div class="formularios">
+        <form>
+            <div class="form-group ">
+                <label for="">Nombre del Hotel</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombres" ng-model="nombre">
+            </div>
+            <div class="form-group ">
+                <label for="exampleInputEmail1">Pais</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Apellidos" ng-model="apellido">
+            </div>
+            <div class="form-group ">
+                <label for="exampleInputEmail1">Región</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Apellidos" ng-model="apellido">
+            </div>
+            <div class="form-group ">
+                <label for="exampleInputEmail1">Ciudad</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Apellidos" ng-model="apellido">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Direccion</label>
+                <input type="text" class="form-control" id="direccion" placeholder="Direccion donde reside" ng-model="direccion">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Numero telefonico</label>
+                <input type="text" class="form-control" id="celular" placeholder="Numero telefonico o celular" ng-model="celular">
+            </div>
+            <div class="form-group">
+                <label>Tipo de Empleado</label>
+                <select id="emptipo_id" ng-model='emptipo_id' ng-options="emptipo.tipo for emptipo in emptipos track by emptipo.id" class="form-control">
+                    <option value="">Seleccione una Opción...</option>
+                </select>
+            </div>
+        </form>
+
+        <div class="inputs">
+            <a href="" ng-click="enviar();"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><p>Guardar</p> </a> <br><br>
+        </div>
+    </div>
+</div>
