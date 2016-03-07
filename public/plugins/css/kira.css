@@ -111,5 +111,11 @@ li a span{
 	font-size: 1.8rem;
 	color:#446CB3;
 }
+.li{
+	color:#446CB3;
+	font-size: 1.6rem;
+}
 
-
+.li:hover{
+	color: #446CB3;
+}

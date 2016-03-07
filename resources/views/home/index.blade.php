@@ -33,7 +33,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                    Residencial Moquegua
                 </a>
             </div>
 
@@ -61,7 +61,7 @@
         </div>
     </nav>
 
-    <div class="content" ng-app="homeApp">
+    <div ng-app="homeApp">
 
         <div ng-view></div>
 
