@@ -12,13 +12,20 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="index/css/reset.css">
-    <link rel="stylesheet" href="index/css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
-    <link rel="stylesheet" type="text/css" href="plugins/css/bootstrap-kira.css" />
-  
+    <style>
+        body {
+            font-family: 'Lato';
+        }
+
+        .fa-btn {
+            margin-right: 6px;
+        }
+    </style>
 </head>
-<body>
+<body id="app-layout">
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
@@ -39,12 +46,16 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/home') }}">Home</a></li>
+                </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
+                        <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -61,30 +72,11 @@
         </div>
     </nav>
 
-    <div class="content" ng-app="homeApp">
+    @yield('content')
 
-        <div ng-view></div>
-
-    </div>
-
-     <!-- Llamado a angular-->
-
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
-   
-    <!-- Angular-Bootrstrap UI --> 
-
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
-     <!-- JavaScripts -->
+    <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-    <!--JS principal -->
-    <script src="{{ asset('plugins/js/mainHome.js') }}"></script>
-
-    <!--Controladores conectados a la web -->
-
-    <script src="plugins/js/controllers/CarouselDemoCtrl.js"></script>  
-
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
 </html>

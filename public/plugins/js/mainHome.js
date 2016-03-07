@@ -1,11 +1,8 @@
 
  var app = angular.module('homeApp', [
-  'ngRoute'
+  'ngRoute', 'ui.bootstrap'
 ]);
 
-  var slider = angular.module('app', [
-  'ngRoute'
-]);
 
 
 /**

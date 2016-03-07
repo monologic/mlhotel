@@ -126,12 +126,13 @@
         <div class="fix">
            <nav class="submenu">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                   <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
+                    <li>{{ Auth::user()->empleado->hotel->nombre }}</li>
                     <li><a href="#" ><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span></a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span></a></li>
                    <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             {{ Auth::user()->empleado->nombres . " " . Auth::user()->empleado->apellidos }} <span class="caret"></span>
                             </a>
 
@@ -163,7 +164,6 @@
     <script src="plugins/multilevel/js/classie.js"></script>
     <script src="plugins/multilevel/js/dummydata.js"></script>
     <script src="plugins/multilevel/js/main.js"></script>
-    <script src="plugins/js/ui-bootstrap-tpls-1.2.2.min.js.js"></script>
 
     <!-- Controladrores de Angular -->
 
