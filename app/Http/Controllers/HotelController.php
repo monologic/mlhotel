@@ -8,6 +8,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Hotel;
+use App\Empleado;
+use App\Emptipo;
 
 class HotelController extends Controller
 {
@@ -96,6 +98,73 @@ class HotelController extends Controller
     public function getHoteles()
     {
         $hoteles = Hotel::all();
-        return response()->json( $hoteles->toArray() );
+        $hoteles = $hoteles->toArray();
+
+        foreach ($hoteles as $key => $hotel) {
+            $adm = $this->getAdministrador( $hotel['id'] );
+            $hoteles[$key]['administrador'] = $adm[0];
+
+        }
+
+        return response()->json( $hoteles );
+    }
+
+    public function getAdministrador($hotel_id)
+    {
+        $id_adm = $this->getIdCargoAdminHotel();
+
+        $adm = Empleado::where([
+                    ['hotel_id', $hotel_id],
+                    ['emptipo_id', $id_adm],
+                ])->get();
+
+        $adm = $adm->toArray();
+
+        if (count($adm) > 0) {
+            foreach ($adm as $key => $admin) {
+                $list_admin[$key] = $admin['nombres'] . " " . $admin['apellidos']; 
+            }
+        }
+        else {
+            $list_admin[0] = null;
+        }
+
+        
+        return $list_admin;
+    }
+
+    public function getIdCargoAdminHotel()
+    {
+        $id_adm = $emptipos = Emptipo::select('id')->where('tipo', 'LIKE', 'Administrador')->get();
+        $id_adm = $id_adm->toArray();
+        $id_adm = $id_adm[0]['id'];
+
+        return $id_adm;
+    }
+
+    public function crearAdminHotel(Request $request)
+    {
+        $empleado = new Empleado($request->all());
+        $empleado->emptipo_id = $this->getIdCargoAdminHotel();
+
+        $empleado->save();
+
+        return response()->json([
+            "empleado_id" => $empleado->id,
+            "hotel_id" => $empleado->hotel_id,
+            "emptipo_id" => $empleado->emptipo_id
+        ]);
+    }
+
+    public function guardarAdminHotel(Request $request)
+    {
+
+        $empleado = Empleado::find($request->empleado);
+        $empleado->fill($request->all());
+        $empleado->save();
+
+        $res = $this->getHoteles();
+
+        return $res;
     }
 }

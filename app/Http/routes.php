@@ -29,6 +29,10 @@ Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 	Route::get('getUsuarioTipos', 'UsuariotipoController@getUsuarioTipos');
 	Route::get('getHoteles', 'HotelController@getHoteles');
 
+	Route::post('crearAdminHotel', 'HotelController@crearAdminHotel');
+	Route::post('guardarAdminHotel', 'HotelController@guardarAdminHotel');
+
+
 
 });
 
