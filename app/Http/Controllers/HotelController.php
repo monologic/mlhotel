@@ -166,4 +166,11 @@ class HotelController extends Controller
 
         return $res;
     }
+
+    public function dataEditar(Request $request)
+    {
+        
+        $url = explode("=", $request->url['hash']);
+        dd($url[1]);
+    }
 }

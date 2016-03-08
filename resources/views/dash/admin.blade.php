@@ -137,13 +137,25 @@
            <nav class="submenu">
 
                     <ul class="navbar-right">
-                    <li  style="margin-top:10px; color:#446CB3; font-size: 2rem; left:0;padding-right:50px">{{ Auth::user()->empleado->hotel->nombre }}</li>
+                    <li  style="margin-top:10px; color:#446CB3; font-size: 2rem; left:0;padding-right:50px">
+                        @if (Auth::user()->usuariotipo->nombre=="Root")
+                            Administrador del Sistema
+                        @else
+                            {{ Auth::user()->empleado->hotel->nombre }}
+                        @endif
+                    </li>
                     <li><a href="#" ><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span></a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span></a></li>
                    <li class="dropdown">
                             <a href="" class="dropdown-toggle li" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Auth::user()->empleado->nombres . " " . Auth::user()->empleado->apellidos }} <span class="caret"></span>
+                                @if (Auth::user()->usuariotipo->nombre=="Root")
+                                    Admin <span class="caret"></span>
+                                @else
+                                    {{ Auth::user()->empleado->nombres . " " . Auth::user()->empleado->apellidos }} <span class="caret"></span>
+                                @endif
+                            
+                            
                             </a>
 
                             <ul class="dropdown-menu" role="menu">

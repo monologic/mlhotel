@@ -78,11 +78,11 @@ class AuthController extends Controller
 
     protected function authenticated()
     {
-        Auth::user()->empleado;
-        Auth::user()->empleado->hotel;
-
         Auth::user()->usuariotipo;
-
+        if (Auth::user()->usuariotipo->nombre != "Root") {
+            Auth::user()->empleado;
+            Auth::user()->empleado->hotel;
+        }
         return redirect()->intended($this->redirectPath());
     }
 }

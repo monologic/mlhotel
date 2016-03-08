@@ -39,7 +39,7 @@ app.controller('hotelController', function($scope,$http) {
             });
     }
 
-     $scope.guardarAdminHotel = function () {
+    $scope.guardarAdminHotel = function () {
         $http.post('admin/guardarAdminHotel',
             {   'nombres':$scope.nombre,
                 'apellidos':$scope.apellido,
@@ -56,6 +56,13 @@ app.controller('hotelController', function($scope,$http) {
             }, function errorCallback(response) {
             });
     }
-
+    $scope.dataEditar = function () {
+        $http.post('admin/dataEditarHotel', { 'url' : window.location }).then(function successCallback(response) {
+            $scope.data = response.data;
+        }, function errorCallback(response) {
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+        });
+    }
     
 });

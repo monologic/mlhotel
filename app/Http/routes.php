@@ -29,15 +29,16 @@ Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 	Route::get('getEmpForUsers', 'empleadoController@getEmpleadosParaUsuarios');
 	Route::get('getUsuarioTipos', 'UsuariotipoController@getUsuarioTipos');
 	Route::get('getHoteles', 'HotelController@getHoteles');
+	
 
 	Route::post('crearAdminHotel', 'HotelController@crearAdminHotel');
 	Route::post('guardarAdminHotel', 'HotelController@guardarAdminHotel');
-
+	Route::post('dataEditarHotel', 'HotelController@dataEditar');
 
 
 });
 
-
+Route::post('admin/SlidCreate', 'bannerController@sliderCreateIndex');
 
 /*
 |--------------------------------------------------------------------------
