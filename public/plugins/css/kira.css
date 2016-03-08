@@ -55,7 +55,9 @@
 .tit2{
 	color: #428bca;	
 	font-size: 2.7rem;
-	margin-top:40px;
+	text-align: center;
+	top: 30px;
+	
 	font-weight: bold;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -88,25 +90,7 @@ form{
 	margin-left: 50px;
 }
 
-.submenu{
-	display: inline-block;
-	position: relative;
-	background-color: transparent;
-	width: 100%;
-	right: 0;
-	height: 50px;
-	padding-right: 50px;
-	background-color: transparent;
-}
-.fix{
-	display: inline-block;
-	position: fixed;
-	top: 0;
-	width:100%;
-	right: 0;
-	z-index: 50;
 
-}
 li a span{
 	font-size: 1.8rem;
 	color:#446CB3;
@@ -118,4 +102,45 @@ li a span{
 
 .li:hover{
 	color: #446CB3;
+}
+
+/*--Hotel estilos*/
+.table{
+	color: black;
+	width:80%;
+	margin: auto;
+	top:20px;
+}
+.hb{
+	display: block;
+	position: relative;
+	float: right;
+	width: 180px;
+}
+/* Navbar kira mi menu de elementos top*/
+
+.submenu{
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	right: 0;
+	height: 50px;
+	padding:10px 50px 10px;
+}
+.fix{
+	display: inline-block;
+	position: fixed;
+	top: 0;
+	width:100%;
+	right: 0;
+	z-index: 50;
+
+}
+ul.navbar-right li {
+    display: inline;
+   	margin-left: 20px;
+}
+ul.navbar-right li a {
+
+    text-decoration: none;   
 }

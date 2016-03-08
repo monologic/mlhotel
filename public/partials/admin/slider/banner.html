@@ -1,0 +1,34 @@
+<div id="page-wrapper" ng-controller="bannerController">
+    <label>{{mensaje}}</label>
+
+    <h3 class="text-center tit2">Añadir Banner</h3>
+    <div class="formularios">
+        <form>
+            <div class="form-group ">
+                <label for="">Titulo</label>
+                <input type="text" class="form-control" id="titulo" placeholder="titulo" ng-model="titulo">
+            </div>
+            <div class="form-group ">
+                <label for="exampleInputEmail1">Imagen</label>
+                <input type="file" id="file" file-model="imgen">
+            </div>
+            <div class="form-group ">
+                <label for="exampleInputEmail1">Contenido</label>
+                <input type="text" class="form-control" id="contenido" placeholder="contenido" ng-model="contenido">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Orden</label>
+                <input type="text" class="form-control" id="orden" placeholder="orden" ng-model="orden">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Estado</label>
+                <input type="text" class="form-control" id="estado" placeholder="Estado del banner" ng-model="estado">
+            </div>
+           
+        </form>
+
+        <div class="inputs">
+            <a href="" ng-click="enviar();"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><p>Guardar</p> </a> <br><br>
+        </div>
+    </div>
+</div>

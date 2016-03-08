@@ -6,8 +6,16 @@ function CarouselDemoCtrl($scope){
       
     },
     {
+      image: 'http://www.tapetus.pl/obrazki/n/135535_hotel-basen-palmy.jpg'
+    },
+    {
       image: 'http://cdni.adventure-life.com/88/05/6/Sitting_area/fullsize.jpg'
+    },
+    {
+      image: 'http://www.marina-hotels.com/files/hotel/marina-luz-mallorca/marinaluz-Cala-Estancia-Mallorca-general-001.jpg'
     }
+  
+  
   
   ];
 }

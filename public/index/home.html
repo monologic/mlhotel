@@ -3,9 +3,11 @@
     <div>
       <carousel interval="myInterval">
         <slide ng-repeat="slide in slides" active="slide.active">
-          <img class="imgm" ng-src="{{slide.image}}">
+          <img class="img" ng-src="{{slide.image}}">
+            <p class="txti">Slide {{$index+1}}</p>
+            <p class="txde">Slide {{$index+1}}</p>
           <div class="carousel-caption">
-            <h4>Slide {{$index+1}}</h4>
+            
           </div>
         </slide>
       </carousel>

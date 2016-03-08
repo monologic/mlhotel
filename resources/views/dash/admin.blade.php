@@ -124,7 +124,7 @@
                 </ul>
 
                  <ul data-menu="submenu-8" class="menu__level">
-                    <li class="menu__item"><a class="menu__link" href="#">Control Banner</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#/Banner">Control Banner</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/Empleados/crear">Control Tipos de Habitaciones</a></li>
                     <li role="separador" class="menu__item"><a class="menu__separador" href="#"></a></li>
                     <li class="menu__item"><a class="menu__link" href="#/Hoteles">Hotel</a></li>
@@ -135,8 +135,8 @@
         <!-- sub menu de cabezera --> 
         <div class="fix">
            <nav class="submenu">
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
+
+                    <ul class="navbar-right">
                     <li  style="margin-top:10px; color:#446CB3; font-size: 2rem; left:0;padding-right:50px">{{ Auth::user()->empleado->hotel->nombre }}</li>
                     <li><a href="#" ><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span></a></li>
@@ -151,7 +151,7 @@
                             </ul>
                         </li>
                   </ul>
-                </div>
+                
                 <!-- /.dropdown-messages -->
         </nav> 
         </div>
@@ -182,6 +182,7 @@
     <script src="plugins/js/controllers/usuariotipoController.js"></script> 
     <script src="plugins/js/controllers/usuarioController.js"></script> 
     <script src="plugins/js/controllers/hotelController.js"></script> 
+    <script src="plugins/js/controllers/bannerController.js"></script> 
 
     <script>
     (function() {
