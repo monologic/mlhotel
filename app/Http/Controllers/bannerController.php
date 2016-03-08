@@ -38,14 +38,7 @@ class bannerController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
-        //$slider = new slider($request->all());
-        //dd($slider)
-        //$slider->save();
-
-        //return response()->json([
-            //"mensaje" => 'Creado'
-        //]);
+       
     }
 
     /**
@@ -92,4 +85,23 @@ class bannerController extends Controller
     {
         //
     }
+    public function sliderCreateIndex(Request $request)
+    {
+        
+      if($request->file('imagen'))
+        {
+            $file = $request -> file('imagen');
+            $name = 'slider_'. time() . '.' .$file->getClientOriginalExtension();
+            $path=public_path() . "/imagen/sliders/";
+            $file -> move($path,$name);
+        }
+        $slider = new Slider($request->all());
+
+        $slider->imagen = $name;
+         $slider->save();
+
+
+    }
+
+
 }

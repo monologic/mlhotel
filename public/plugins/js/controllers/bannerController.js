@@ -1,7 +1,7 @@
 app.controller('bannerController', function($scope,$http) {
 
     $scope.enviar = function () {
-        $http.post('admin/banner',
+        $http.post('',
             {   'titulo':$scope.titulo,
                 'imagen':$scope.imagen,
                 'contenido':$scope.contenido,

@@ -1,34 +1,43 @@
-<div id="page-wrapper" ng-controller="bannerController">
-    <label>{{mensaje}}</label>
+<form method="POST" action="admin/SlidCreate" accept-charset="UTF-8" enctype="multipart/form-data">
 
-    <h3 class="text-center tit2">Añadir Banner</h3>
-    <div class="formularios">
-        <form>
-            <div class="form-group ">
-                <label for="">Titulo</label>
-                <input type="text" class="form-control" id="titulo" placeholder="titulo" ng-model="titulo">
-            </div>
-            <div class="form-group ">
-                <label for="exampleInputEmail1">Imagen</label>
-                <input type="file" id="file" file-model="imgen">
-            </div>
-            <div class="form-group ">
-                <label for="exampleInputEmail1">Contenido</label>
-                <input type="text" class="form-control" id="contenido" placeholder="contenido" ng-model="contenido">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Orden</label>
-                <input type="text" class="form-control" id="orden" placeholder="orden" ng-model="orden">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Estado</label>
-                <input type="text" class="form-control" id="estado" placeholder="Estado del banner" ng-model="estado">
-            </div>
-           
-        </form>
-
-        <div class="inputs">
-            <a href="" ng-click="enviar();"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><p>Guardar</p> </a> <br><br>
+        
+        <div class="cuestion2">
+            <h2>Agregar Banner</h2>
+        <hr>
+        <div class="form-group">
+            <label for="tipo">Titulo</label>
+            <input class="form-control" placeholder="Titulo del banner" required="required" name="titulo" type="text" id="titulo">
         </div>
-    </div>
-</div>
+
+        <div class="form-group">
+            <label for="foto">Seleccione imagen</label>
+            <input name="imagen" type="file" id="imagen">
+        </div>
+
+        <div class="form-group">
+            <label for="descripcion">Contenido</label>
+            <textarea class="form-control trumbowyg-demo" required="required" name="contenido" cols="50" rows="10" id="contenido"></textarea>
+        </div>
+         <div class="form-group">
+            <label for="tipo">Orden</label>
+            <input class="form-control" placeholder="Titulo del banner" required="required" name="orden" type="text" id="orden">
+        </div>
+         <div class="form-group">
+            <label for="tipo">Estado</label>
+            <input class="form-control" placeholder="Titulo del banner" required="required" name="estado" type="text" id="estado">
+        </div>
+
+
+        
+
+        <div class="form-group">
+            
+            <input class="btn btn-primary" type="submit" value="Registrar tipo de habitacion">
+        </div>
+
+        </div>
+        
+        
+
+
+    </form>
