@@ -1,5 +1,4 @@
-<div id="page-wrapper" ng-controller="empleadoController" ng-init="getEmptipos();">
-    <label>{{mensaje}}</label>
+<div id="page-wrapper" ng-controller="hotelController">
 
     <h3 class="text-center tit2">Registro de Hoteles</h3>
     <div class="formularios">
@@ -9,35 +8,30 @@
                 <input type="text" class="form-control" id="nombre" placeholder="Nombres" ng-model="nombre">
             </div>
             <div class="form-group ">
-                <label for="exampleInputEmail1">Pais</label>
-                <input type="text" class="form-control" id="apellido" placeholder="Apellidos" ng-model="apellido">
+                <label for="pais">País</label>
+                <input type="text" class="form-control" id="pais" placeholder="Apellidos" ng-model="pais">
             </div>
             <div class="form-group ">
-                <label for="exampleInputEmail1">Región</label>
-                <input type="text" class="form-control" id="apellido" placeholder="Apellidos" ng-model="apellido">
+                <label for="region">Región</label>
+                <input type="text" class="form-control" id="region" placeholder="Apellidos" ng-model="region">
             </div>
             <div class="form-group ">
-                <label for="exampleInputEmail1">Ciudad</label>
-                <input type="text" class="form-control" id="apellido" placeholder="Apellidos" ng-model="apellido">
+                <label for="ciudad">Ciudad</label>
+                <input type="text" class="form-control" id="ciudad" placeholder="Apellidos" ng-model="ciudad">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Direccion</label>
+                <label for="direccion">Direccion</label>
                 <input type="text" class="form-control" id="direccion" placeholder="Direccion donde reside" ng-model="direccion">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Numero telefonico</label>
-                <input type="text" class="form-control" id="celular" placeholder="Numero telefonico o celular" ng-model="celular">
+                <label for="telefono">Numero telefonico</label>
+                <input type="text" class="form-control" id="telefono" placeholder="Numero telefonico o celular" ng-model="telefono">
             </div>
-            <div class="form-group">
-                <label>Tipo de Empleado</label>
-                <select id="emptipo_id" ng-model='emptipo_id' ng-options="emptipo.tipo for emptipo in emptipos track by emptipo.id" class="form-control">
-                    <option value="">Seleccione una Opción...</option>
-                </select>
-            </div>
+        
         </form>
 
         <div class="inputs">
-            <a href="" ng-click="enviar();"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><p>Guardar</p> </a> <br><br>
+            <a href="#/Hoteles" ng-click="enviar();"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><p>Guardar</p> </a> <br><br>
         </div>
     </div>
 </div>

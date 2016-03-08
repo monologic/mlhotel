@@ -41,12 +41,11 @@ class HotelController extends Controller
      */
     public function store(Request $request)
     {
-        $usuario = new Usuario($request->all());
-        $usuario->password = bcrypt($request->password);
-        $usuario->save();
+        $hotel = new Hotel($request->all());
+        $hotel->save();
 
         return response()->json([
-            "mensaje" => 'Usuario Creado'
+            "mensaje" => 'Hotel Creado'
         ]);
     }
 

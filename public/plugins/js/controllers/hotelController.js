@@ -1,16 +1,13 @@
 app.controller('hotelController', function($scope,$http) {
 
     $scope.enviar = function () {
-        $http.post('admin/empleado',
-            {   'nombres':$scope.nombre,
-                'apellidos':$scope.apellido,
-                'sexo':$('#sexo').val(),
-                'fecha_nac':$scope.nacimiento,
-                'dni':$scope.dni,
+        $http.post('admin/hotel',
+            {   'nombre':$scope.nombre,
+                'pais':$scope.pais,
+                'region_estado':$scope.region,
+                'ciudad':$scope.ciudad,
                 'direccion':$scope.direccion,
-                'celular':$scope.celular,
-                'emptipo_id':$('#emptipo_id').val()
-                //'hotel_id':$('#hotel_id').text()
+                'telefono':$scope.telefono
             }).then(function successCallback(response) {
                 $scope.mensaje = response.data.mensaje;
             }, function errorCallback(response) {
