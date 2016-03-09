@@ -39,3 +39,43 @@ img{
   color: white;
   background-color:rgba(50,50,50,0.7);
 }
+.carrito{
+  display: inline-block;
+  top:10%;
+  position: fixed;
+  width: 400px;
+  right: -350px;
+  transition:all 1.2s ease;
+}
+.carrito:hover{
+  right: 0px;
+
+
+}
+.icono{
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  text-align: center;
+  background-color: white;
+  border-radius:5px 0px 0px 5px; 
+  color: black;
+  font-size: 2rem;
+}
+.total{
+  display: inline-block;
+  position: relative;
+  float: right;
+  width: 350px;
+  background-color:white;
+  margin-top:0px;
+  border-radius: 0px 5px 5px 5px;
+  padding: 10px;
+}
+.costo{
+  display:flex;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  width: 100%;
+  right: 0;
+}
