@@ -31,7 +31,3 @@ app.controller('PageCtrl', function (/* $scope, $location, $http */) {
   console.log("Page Controller reporting for duty(reconocio el controlador).");
 
 });
-slider.controller('PageCtrl', function (/* $scope, $location, $http */) {
-  console.log("Page Controller reporting for duty(reconocio el controlador).");
-
-});

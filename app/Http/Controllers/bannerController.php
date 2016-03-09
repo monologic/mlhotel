@@ -99,8 +99,17 @@ class bannerController extends Controller
 
         $slider->imagen = $name;
          $slider->save();
+         return redirect('admin#/Banner');
 
 
+    }
+    public function getBanners()
+    {
+        $Sliders = Slider::all();
+        $Sliders = $Sliders ->toArray();
+
+
+        return response()->json( $Sliders );
     }
 
 

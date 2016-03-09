@@ -124,7 +124,7 @@
                 </ul>
 
                  <ul data-menu="submenu-8" class="menu__level">
-                    <li class="menu__item"><a class="menu__link" href="#/Banner">Control Banner</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#/LisBanner">Control Banner</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/Empleados/crear">Control Tipos de Habitaciones</a></li>
                     <li role="separador" class="menu__item"><a class="menu__separador" href="#"></a></li>
                     <li class="menu__item"><a class="menu__link" href="#/Hoteles">Hotel</a></li>

@@ -29,6 +29,7 @@ Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 	Route::get('getEmpForUsers', 'empleadoController@getEmpleadosParaUsuarios');
 	Route::get('getUsuarioTipos', 'UsuariotipoController@getUsuarioTipos');
 	Route::get('getHoteles', 'HotelController@getHoteles');
+	Route::get('getBanners', 'bannerController@getBanners');
 	
 
 	Route::post('crearAdminHotel', 'HotelController@crearAdminHotel');

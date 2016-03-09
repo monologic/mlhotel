@@ -19,17 +19,20 @@ img{
 .txti{
   display: block;
   position: absolute;
-  margin-top: 0;
-  right: 0;
+  top: 0;
+  right: 50;
   font-size: 4rem;
   z-index: 50;
   color: blue;
 }
 .txde{
-  display: block;
+ display: block;
   position: absolute;
-  float: left;
-  font-size: 3rem;
+  top: 0;
+  float: 0;
+  font-size: 4rem;
+  z-index: 50;
+  color: blue;
   
 }
 

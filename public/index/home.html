@@ -1,17 +1,18 @@
 
-  <div ng-controller="CarouselDemoCtrl" id="slides_control">
+  <div ng-controller="bannerController" id="slides_control" ng-init="getBanners();">
     <div>
       <carousel interval="myInterval">
-        <slide ng-repeat="slide in slides" active="slide.active">
-          <img class="img" ng-src="{{slide.image}}">
-            <p class="txti">Slide {{$index+1}}</p>
-            <p class="txde">Slide {{$index+1}}</p>
-          <div class="carousel-caption">
-            
+        <slide  ng-repeat="x in banners" active="slide.active">
+            <img src="imagen/sliders/{{ x.imagen }}">
+            <p class="txti">{{ x.titulo}}</p>
+            <p class="txde">{{ x.contenido }}</p>
+          <div class="carousel-caption">  
           </div>
         </slide>
       </carousel>
+
     </div>
+             
   </div>
 
   

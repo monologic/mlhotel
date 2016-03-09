@@ -83,7 +83,7 @@
 
     <!--Controladores conectados a la web -->
 
-    <script src="plugins/js/controllers/CarouselDemoCtrl.js"></script>  
+    <script src="plugins/js/controllers/bannerController.js"></script>  
 
 
 </body>
