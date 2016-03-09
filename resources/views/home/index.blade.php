@@ -13,6 +13,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="index/css/reset.css">
+    <link rel="stylesheet" href="index/css/animate.css">
     <link rel="stylesheet" href="index/css/style.css">
 
     <link rel="stylesheet" type="text/css" href="plugins/css/bootstrap-kira.css" />
@@ -71,6 +72,8 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+
+    <script src="index/js/wow.min.js"></script>  
    
     <!-- Angular-Bootrstrap UI --> 
 
@@ -84,6 +87,9 @@
     <!--Controladores conectados a la web -->
 
     <script src="plugins/js/controllers/bannerController.js"></script>  
+     <script>
+         new WOW().init();
+     </script>
 
 
 </body>

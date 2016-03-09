@@ -3,10 +3,11 @@
     <div>
       <carousel interval="myInterval">
         <slide  ng-repeat="x in banners" active="slide.active">
-            <img src="imagen/sliders/{{ x.imagen }}">
-            <p class="txti">{{ x.titulo}}</p>
-            <p class="txde">{{ x.contenido }}</p>
+            <img src="imagen/sliders/{{x.imagen}}">
+            <p class="txti wow  wow fadeInDown" data-wow-duration="2s" data-wow-delay="1s">{{ x.titulo }}</p>
+            <p class="txde wow fadeInLeft" data-wow-duration="4s"  data-wow-delay="3s">{{ x.contenido }}</p>
           <div class="carousel-caption">  
+
           </div>
         </slide>
       </carousel>
