@@ -56,13 +56,36 @@ app.controller('hotelController', function($scope,$http) {
             }, function errorCallback(response) {
             });
     }
-    $scope.dataEditar = function () {
-        $http.post('admin/dataEditarHotel', { 'url' : window.location }).then(function successCallback(response) {
-            $scope.data = response.data;
-        }, function errorCallback(response) {
-        // called asynchronously if an error occurs
-        // or server returns response with an error status.
-        });
+
+    var idHotel;
+    $scope.dataEditar = function (data) {
+
+        idHotel = data.id;
+
+        $scope.nomHotel = data.nombre;
+        $scope.paisHotel = data.pais;
+        $scope.regHotel = data.region_estado;
+        $scope.ciuHotel = data.ciudad;
+        $scope.dirHotel = data.direccion;
+        $scope.fonoHotel = data.telefono;
     }
+    $scope.editarHotel = function () {
+
+        $http.put('admin/hotel/'+idHotel,
+            {   'nombre':$scope.nomHotel,
+                'pais':$scope.paisHotel,
+                'region_estado':$scope.regHotel,
+                'ciudad':$scope.ciuHotel,
+                'direccion':$scope.dirHotel,
+                'telefono':$scope.fonoHotel
+            }).then(function successCallback(response) {
+                 $scope.hoteles = response.data;
+            }, function errorCallback(response) {
+            // called asynchronously if an error occurs
+            // or server returns response with an error status.
+            });
+    }
+
+
     
 });
