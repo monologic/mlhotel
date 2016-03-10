@@ -29,6 +29,9 @@ app.config(['$routeProvider', function ($routeProvider) {
     .when("/Banner", {templateUrl: "partials/admin/slider/banner.html", controller: "PageCtrl"})
     .when("/LisBanner", {templateUrl: "partials/admin/slider/ver.html", controller: "PageCtrl"})
 
+    .when("/tipoHab", {templateUrl: "partials/admin/TipoHab/crear.html", controller: "PageCtrl"})
+    .when("/LisHab", {templateUrl: "partials/admin/TipoHab/ver.html", controller: "PageCtrl"})
+
     .when("/Hoteles", {templateUrl: "partials/admin/hotel/ver.html", controller: "PageCtrl"})
     .when("/Hoteles/crear", {templateUrl: "partials/admin/hotel/crear.html", controller: "PageCtrl"})
     .when("/Hoteles/editar", {templateUrl: "partials/admin/hotel/editar.html", controller: "PageCtrl"})

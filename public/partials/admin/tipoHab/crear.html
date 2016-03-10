@@ -1,0 +1,47 @@
+<div id="page-wrapper" ng-controller="habtipoController" ng-init="getHabTipo();">
+<div class="formularios">
+
+    <form method="POST" action="admin/AddSubHab" accept-charset="UTF-8" enctype="multipart/form-data">
+    <br><br>
+        <h2 class="tit2">Agregar SubTipo de Habitacion</h2>
+        <br><br>
+        <div class="form-group">
+            <label for="tipo">Nombre</label>
+            <input class="form-control" placeholder="Nombre de la habitacion" required="required" name="nombre" type="text" id="nombre">
+        </div>
+
+        <div class="form-group">
+            <label for="foto">Seleccione imagen</label>
+            <input name="imagen" type="file" id="imagen">
+        </div>
+
+        <div class="form-group">
+            <label for="descripcion">Descripcion</label>
+            <textarea class="form-control trumbowyg-demo" required="required" name="contenido" cols="50" rows="6" id="contenido"></textarea>
+        </div>
+         <div class="form-group">
+            <label for="tipo">Precio</label>
+            <input class="form-control" placeholder="Numero de orden" required="required" name="orden" type="text" id="orden">
+        </div>
+         <div class="form-group">
+            <label for="tipo">Tipo Habitacion</label>
+           <select id="habtipo_id" ng-model='habtipo_id' ng-options="habtipo.tipo for habtipo in  habtipos track by habtipo.id" class="form-control">
+                    <option value="">Seleccione una Opción...</option>
+                </select>
+            </select>
+        </div>
+        
+        <!-- input invisile-->
+        <input ng-model="hotel_id"  required="required" name="hotel_id" type="text" id="hotel_id" value="{{hotel_id}}">
+
+        <div class="form-group">
+            
+            <input class="btn btn-primary" type="submit" value="Guardar">
+        </div>
+
+       
+    </form>  
+</div>
+</div>
+
+        

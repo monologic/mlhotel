@@ -1,4 +1,17 @@
+Opciones de implementacion:
+-agregar perfil por habitacion detallando todo los servicios internos q dispone para mejor aprecion 
+y atraccion por parte del usuario
+
+
+
+
+
 Especificaciones del Sistema:
+
+
+
+
+
 
 Glosario:
 Administrador del Sistema: Es la persona que tiene acceso a todo el sistema de todos 				los hoteles (sucursales), es el único que puede crear hoteles, asignar 					administradores y crear los cargos.
