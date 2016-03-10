@@ -127,7 +127,7 @@
                     <li class="menu__item"><a class="menu__link" href="#/Cargos/crear">Crear Cargo</a></li>
                 </ul>
 
-                 <ul data-menu="submenu-8" class="menu__level">
+                <ul data-menu="submenu-8" class="menu__level">
                     <li class="menu__item"><a class="menu__link" href="#/LisBanner">Control Banner</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/LisHab">Control Tipos de Habitaciones</a></li>
                     <li role="separador" class="menu__item"><a class="menu__separador" href="#"></a></li>
@@ -199,7 +199,8 @@
     <script src="plugins/js/controllers/usuarioController.js"></script> 
     <script src="plugins/js/controllers/hotelController.js"></script> 
     <script src="plugins/js/controllers/bannerController.js"></script> 
-     <script src="plugins/js/controllers/habtipoController.js"></script>
+    <script src="plugins/js/controllers/habtipoController.js"></script>
+    <script src="plugins/js/controllers/habsubtipoController.js"></script>
 
     <script>
     (function() {

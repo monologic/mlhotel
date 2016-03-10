@@ -147,7 +147,7 @@ class HotelController extends Controller
     }
     public function getIdTipoUsuarioAdminHotel()
     {
-        $id_tua = Usuariotipo::select('id')->where('nombre', 'Admin')->get();
+        $id_tua = Usuariotipo::select('id')->where('nombre', 'Administrador')->get();
         $id_tua = $id_tua->toArray();
         $id_tua = $id_tua[0]['id'];
 
