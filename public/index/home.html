@@ -27,15 +27,12 @@
           </div>
              
           <div class="desc-B">
-            <a href="" class="btn btn-primary" style="float:right"> + añadir</a>
+            <a href="" class="btn btn-primary" style="float:right" ng-click="addDetalleReserva(y);"> + añadir</a>
           </div>
         </div>
       </div>
 
-  </section>         
-  </div>
-
-  <div class="carrito">
+      <div class="carrito">
     
     <div class="icono"><span class="glyphicon glyphicon-shopping-cart"></span></div>
 
@@ -44,10 +41,10 @@
           <table class="table table-hover">
             
             <thead>
-              <tr>
-                <th>#</th>
-                <th>Habitacion</th>
-                <th>Costo</th>
+              <tr ng-repeat="z in detalles">
+                <th>{{$index+1}}</th>
+                <th>{{z.nombre}}</th>
+                <th>{{z.precio}}</th>
                 
               </tr>
               </thead>
@@ -63,6 +60,11 @@
           <a href="" class="btn btn-primary" style="width:80%; margin-left:10%">Reservar</a>
       </form>
   </div>
+
+  </section>         
+  </div>
+
+  
    
 
 

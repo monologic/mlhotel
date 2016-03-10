@@ -8,10 +8,14 @@ app.controller('habsubtipoController', function($scope,$http) {
         // or server returns response with an error status.
         });
     }
+    var details = Array();
    	$scope.addDetalleReserva =function (data) {
 
-   		data.push(data);
 
-   		$scope.detalles = data;
+
+   		details.push(data);
+
+   		$scope.detalles = details;
+
    	} 
 });
