@@ -5,14 +5,11 @@
     
 
     <table class="table table-hover">
-
     	<thead>
-            
             <tr>
                 <td colspan="4">
                     <a href="#/Hoteles/crear" class="btn btn-primary hb"><span class="glyphicon glyphicon-plus" aria-hidden="true" ></span>  Nuevo Hotel</a>
                 </td>
-                
             </tr>
     		<tr>
     			<th>#</th>
@@ -26,8 +23,8 @@
 			    <td>{{$index+1}}</td>
                 <td>{{x.nombre}}</td>
                 <td ng-if="x.administrador != null">
-                    {{x.administrador}}
-                    <a href="" ng-click="dataEditar(x);" data-toggle="modal" data-target="#editar" class="btn btn-success">Editar</a>
+                    {{x.administrador.nombres}} {{x.administrador.apellidos}}
+                    <a href="" ng-click="dataEditarAdmin(x.administrador);" data-toggle="modal" data-target="#myModal" class="btn btn-success btn-sm">Editar</a>
                 </td>
                 <td ng-if="x.administrador == null">
                     <button ng-click="crearAdminHotel(x.id);" class="btn btn-primary"
@@ -48,7 +45,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title" id="myModalLabel">Asignar Administrador</h2>
+                    <h2 class="modal-title" id="myModalLabel">Administrador</h2>
                 </div>
                 <div class="modal-body">
                     <div class="form-group ">

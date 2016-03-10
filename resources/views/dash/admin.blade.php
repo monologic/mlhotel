@@ -53,7 +53,11 @@
                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-6" href="#">Usuarios</a></li>
                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-7" href="#">Empleado</a></li>
 
-                     <li class="menu__item"><a class="menu__link" data-submenu="submenu-8" href="#">Adminstrador</a></li>
+                     @if (Auth::user()->usuariotipo->nombre=="Root")
+
+                        <li class="menu__item"><a class="menu__link" data-submenu="submenu-8" href="#">Adminstrador</a></li>
+
+                    @endif
                 </ul>
                 <!-- Submenu 1 -->
                 <ul data-menu="submenu-1" class="menu__level">

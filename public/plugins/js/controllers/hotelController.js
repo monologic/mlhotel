@@ -26,7 +26,7 @@ app.controller('hotelController', function($scope,$http) {
     }
 
     var dataAdmin;
-
+    
     $scope.crearAdminHotel = function (hotel_id) {
         $http.post('admin/crearAdminHotel',
             {   
@@ -37,6 +37,21 @@ app.controller('hotelController', function($scope,$http) {
             // called asynchronously if an error occurs
             // or server returns response with an error status.
             });
+    }
+
+    /**
+     * Al hacer click en Editar admin 
+     */
+    $scope.dataEditarAdmin = function (data) {
+
+        dataAdmin = data;
+
+        $scope.nombre = data.nombres;
+        $scope.apellido = data.apellidos;
+        $scope.nacimiento = data.fecha_nac;
+        $scope.dni = data.dni;
+        $scope.direccion = data.direccion;
+        $scope.celular = data.celular;
     }
 
     $scope.guardarAdminHotel = function () {
@@ -50,7 +65,7 @@ app.controller('hotelController', function($scope,$http) {
                 'celular':$scope.celular,
                 'emptipo_id':dataAdmin.emptipo,
                 'hotel_id':dataAdmin.hotel_id,
-                'empleado':dataAdmin.empleado_id 
+                'empleado':dataAdmin.id 
             }).then(function successCallback(response) {
                 $scope.hoteles = response.data;
             }, function errorCallback(response) {
@@ -81,10 +96,20 @@ app.controller('hotelController', function($scope,$http) {
             }).then(function successCallback(response) {
                  $scope.hoteles = response.data;
             }, function errorCallback(response) {
-            // called asynchronously if an error occurs
-            // or server returns response with an error status.
+                
             });
     }
+
+    $scope.eliminar = function (id) {
+        $http.delete( 'admin/hotel/'+id ).then(function successCallback(response) {
+            $scope.hoteles = response.data;
+        }, function errorCallback(response) {
+            alert("Ha ocurrido un error, No se puede borrar datos utilizados para otros registros");
+        });
+    }
+    
+
+
 
 
     
