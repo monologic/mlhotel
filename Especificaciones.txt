@@ -1,3 +1,8 @@
+Recordatorio:
+-guardarAdminHotel:: debe poder editar por q ahora crea un nuevo usuario.
+
+
+
 Opciones de implementacion:
 -agregar perfil por habitacion detallando todo los servicios internos q dispone para mejor aprecion 
 y atraccion por parte del usuario

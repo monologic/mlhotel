@@ -13,10 +13,6 @@ use App\Habsubtipo;
 
 class HabSubTipoController extends Controller
 { 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     public function index()
     {
@@ -41,8 +37,6 @@ class HabSubTipoController extends Controller
      */
     public function SubHabitacionesStore(Request $request)
     {
-
-       dd(Auth::user()) ;
        if($request->file('imagen'))
         {
             $file = $request -> file('imagen');
@@ -52,10 +46,8 @@ class HabSubTipoController extends Controller
         }
         $Habsubtipo = new Habsubtipo($request->all());
         $Habsubtipo->foto = $name;
-       // $Habsubtipo->hotel_id = Auth::user()->empleado->hotel->id;
-        dd($Habsubtipo);
-        // $Habsubtipo->save();
-         //return redirect('admin#/Banner');
+        $Habsubtipo->save();
+         return redirect('admin#/LisHab');
     }
 
     /**

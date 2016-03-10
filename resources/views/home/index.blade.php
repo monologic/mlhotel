@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="index/css/reset.css">
     <link rel="stylesheet" href="index/css/animate.css">
     <link rel="stylesheet" href="index/css/style.css">
+    <link rel="stylesheet" href="index/css/habitaciones.css">
 
     <link rel="stylesheet" type="text/css" href="plugins/css/bootstrap-kira.css" />
   
