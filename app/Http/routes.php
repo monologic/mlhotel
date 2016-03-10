@@ -43,6 +43,7 @@ Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 	Route::post('admin/SlidCreate', 'bannerController@sliderCreateIndex');
 	
 	Route::post('admin/AddSubHab', 'HabSubTipoController@SubHabitacionesStore');
+	Route::get('admin/getHabSubtipos', 'HabSubTipoController@getSubHabitaciones');
 
 
 

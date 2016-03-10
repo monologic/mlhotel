@@ -1,6 +1,8 @@
 
-  <div ng-controller="bannerController" id="slides_control" ng-init="getBanners();">
-    <div>
+  <div >
+
+    <div ng-controller="bannerController" id="slides_control" ng-init="getBanners();">
+
       <carousel interval="myInterval">
         <slide  ng-repeat="x in banners" active="slide.active">
             <img src="imagen/sliders/{{x.imagen}}">
@@ -13,7 +15,18 @@
       </carousel>
 
     </div>
-             
+     <section class="Cont-Hab" ng-controller="habsubtipoController" ng-init="getHabSubtipos();">
+
+      <div class="Hab row" ng-repeat="y in habsubtipos">
+        <div class="foto col-md-4 col-sm-6">
+          <img src="imagen/habitaciones/{{y.foto}}" style="with:100%; height:100% ">
+        </div>
+        <div class="desc col-md-8  col-sm-6">
+         <p>{{y.nombre}}</p> 
+        </div>
+      </div>
+
+  </section>         
   </div>
 
   <div class="carrito">
@@ -48,16 +61,10 @@
           <a href="" class="btn btn-primary" style="width:80%; margin-left:10%">Reservar</a>
       </form>
   </div>
+   
 
 
-  <section class="Cont-Hab">
 
-      <div class="Hab">
-        <div class="foto"></div>
-        <div class="desc"></div>
-      </div>
-    
-  </section>
  
 
   

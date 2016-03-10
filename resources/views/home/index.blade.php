@@ -88,9 +88,13 @@
     <!--Controladores conectados a la web -->
 
     <script src="plugins/js/controllers/bannerController.js"></script>  
-     <script>
-         new WOW().init();
-     </script>
+    <script src="plugins/js/controllers/habsubtipoController.js"></script>
+    
+    <script>
+    new WOW().init();
+    </script>
+         
+    
 
 
 </body>

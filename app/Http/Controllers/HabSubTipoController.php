@@ -94,4 +94,12 @@ class HabSubTipoController extends Controller
     {
         //
     }
+    public function getSubHabitaciones()
+    {
+        $Habsubtipos = Habsubtipo::all();
+        $Habsubtipos = $Habsubtipos ->toArray();
+        return response()->json( $Habsubtipos );
+    }
+
+
 }
