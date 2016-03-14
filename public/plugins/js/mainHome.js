@@ -1,6 +1,6 @@
 
  var app = angular.module('homeApp', [
-  'ngRoute', 'ui.bootstrap'
+  'ngRoute'
 ]);
 
 

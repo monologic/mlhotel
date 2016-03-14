@@ -18,9 +18,14 @@
     <link rel="stylesheet" href="index/css/habitaciones.css">
 
     <link rel="stylesheet" type="text/css" href="plugins/css/bootstrap-kira.css" />
+
+    <!-- Sliders-->
+    <link rel="stylesheet" href="index/css/owl.carousel.css">
+    <link rel="stylesheet" href="index/css/owl.theme.css">
+    <link rel="stylesheet" href="index/css/owl.transitions.css">
   
 </head>
-<body>
+<body ng-app="homeApp">
     <nav class="navbar navbar-default" style="z-index:100">
         <div class="container">
             <div class="navbar-header">
@@ -62,12 +67,20 @@
             </div>
         </div>
     </nav>
+        <div ng-controller="habsubtipoController" ng-init="getHabSubtipos();">
+            
+            <div id="owl-demo" class="owl-carousel">
+              <div class="item"><img src="imagen/sliders/fullimage1.jpg" alt="The Last of us"></div>
+              <div class="item"><img src="imagen/sliders/fullimage2.jpg" alt="GTA V"></div>
+              <div class="item"><img src="imagen/sliders/fullimage3.jpg" alt="Mirror Edge"></div>
 
-    <div ng-app="homeApp">
+          </div>
 
+        </div>
+            
         <div ng-view></div>
 
-    </div>
+ 
 
      <!-- Llamado a angular-->
 
@@ -78,9 +91,11 @@
    
     <!-- Angular-Bootrstrap UI --> 
 
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+
      <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script src="index/js/owl.carousel.js"></script> 
 
     <!--JS principal -->
     <script src="{{ asset('plugins/js/mainHome.js') }}"></script>
@@ -92,6 +107,28 @@
     
     <script>
     new WOW().init();
+    
+    </script>
+    <script>
+        $(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+ 
+      navigation : true, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+ 
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+ 
+  });
+ 
+});
     </script>
          
     
