@@ -15,7 +15,15 @@ app.controller('habsubtipoController', function($scope,$http) {
 
    		details.push(data);
 
+      var total = 0;
+
+      for (var i = 0; i < details.length; i++) {
+        total += details[i].precio;
+      }
+
    		$scope.detalles = details;
+      $scope.total = total;
+
 
    	} 
 });
