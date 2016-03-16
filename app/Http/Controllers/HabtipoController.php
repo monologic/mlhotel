@@ -87,17 +87,25 @@ class HabtipoController extends Controller
     {
         //
     }
-     public function getHabTipo()
+      public function HabitacionesStore(Request $request)
     {
-        
-
-        $habtipos = Habtipo::all();
-        $habtipos = $habtipos->toArray();
-        foreach ($habtipos as $key => $objeto) {
-            $habtipos[$key]["hotel_id"] = Auth::user()->empleado->hotel->id;
-
+       if($request->file('imagen'))
+        {
+            $file = $request -> file('imagen');
+            $name = 'Habtipo_'. time() . '.' .$file->getClientOriginalExtension();
+            $path=public_path() . "/imagen/habitaciones/";
+            $file -> move($path,$name);
         }
-        //$habtipos->hotel_id = Auth::user()->empleado->hotel->id;
-        return response()->json( $habtipos );
+        $Habtipo = new Habtipo($request->all());
+        $Habtipo->foto = $name;
+        $Habtipo->save();
+         return redirect('admin#/LisHab');
     }
+     public function getHabitaciones()
+    {
+        $Habtipos = Habtipo::all();
+        $Habtipos = $Habtipos ->toArray();
+        return response()->json( $Habtipos );
+    }
+
 }

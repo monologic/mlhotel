@@ -1,32 +1,28 @@
 
   <div >
-  <div ng-controller="habsubtipoController" ng-init="getHabSubtipos();">
-            
-            <div id="owl-demo" class="owl-carousel">
-              <div class="item"><img src="imagen/sliders/fullimage1.jpg" alt="The Last of us"></div>
-              <div class="item"><img src="imagen/sliders/fullimage2.jpg" alt="GTA V"></div>
-              <div class="item"><img src="imagen/sliders/fullimage3.jpg" alt="Mirror Edge"></div>
+  
+     <section class="Cont-Hab" ng-controller="habtipoController" ng-init="getHabTipo();">
 
-          </div>
+      <div class="Hab row" ng-repeat="y in habtipos">
 
+        <div class="foto col-md-4 col-sm-4">
+          <img src="imagen/habitaciones/{{y.foto}} ">
         </div>
-        
-    </div>
-     <section class="Cont-Hab" ng-controller="habsubtipoController" ng-init="getHabSubtipos();">
 
-      <div class="Hab row" ng-repeat="y in habsubtipos">
-        <div class="foto col-md-4 col-sm-6">
-          <img src="imagen/habitaciones/{{y.foto}}" style="with:100%; height:100% ">
-        </div>
-        <div class="desc col-md-8  col-sm-6">
+        <div class="desc col-md-6 col-sm-6">
           <div class="tdes">
-             <p>{{y.nombre}}</p> 
-          </div>
-             
-          <div class="desc-B">
-            <a href="" class="btn btn-primary" style="float:right" ng-click="addDetalleReserva(y);"> + añadir</a>
-          </div>
-        </div>
+             <h4>{{y.nombre}}</h4>
+             <p>{{y.descripcion}}</p>
+          </div> 
+        </div> 
+
+        <div class="desc-B col-md-2 col-sm-2">
+          <div>
+            <h4 class="text-center">Desde</h4>
+            <p class="text-center">{{y.precio}}</p>
+            <a href="" class="btnB"  ng-click="addDetalleReserva(y);"> + Reservar</a>
+          </div>       
+        </div>     
       </div>
 
       <div class="carrito">
@@ -54,6 +50,7 @@
             <div>Total: </div><div>40</div>
           </div>
             <br>
+
           <a href="" class="btn btn-primary" style="width:80%; margin-left:10%">Reservar</a>
       </form>
   </div>

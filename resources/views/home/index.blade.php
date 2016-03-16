@@ -26,6 +26,17 @@
   
 </head>
 <style>
+.pie{
+  margin-top: 80px;
+  display: block;
+  position: relative;
+  color: white;
+  width: 100%;
+  background-color: black;
+  min-height:200px; 
+
+}
+
 #owl-demo{
     top:-80px;
 }
@@ -61,20 +72,11 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
 
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
-                    @endif
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contactenos</a></li>
                 </ul>
             </div>
         </div>
@@ -89,7 +91,9 @@
             
         <div ng-view></div>
 
- 
+  <footer class="pie">
+    
+  </footer>
 
      <!-- Llamado a angular-->
 
@@ -112,7 +116,7 @@
     <!--Controladores conectados a la web -->
 
     <script src="plugins/js/controllers/bannerController.js"></script>  
-    <script src="plugins/js/controllers/habsubtipoController.js"></script>
+    <script src="plugins/js/controllers/habtipoController.js"></script>
     
     <script>
     new WOW().init();
@@ -122,12 +126,13 @@
       $(document).ready(function() {
  
       $("#owl-demo").owlCarousel({
+
          items : 1,
          autoPlay: true, 
          slideSpeed : 300,
-         paginationSpeed : 400,
+         paginationSpeed : 900,
          singleItem:true,
-         navigation: true, 
+         navigation: false, 
          responsive: true,
          responsiveRefreshRate : 200,
          responsiveBaseWidth: window,
@@ -148,7 +153,7 @@
            
          var imagen = data["items"][i].imagen;
      
-           content += "<img src=imagen/Sliders/" +imagen+ " style='width:100%'>"
+           content += "<img src=imagen/Sliders/" +imagen+ " style='width:100%;  max-height: 650px;'>"
         }
         $("#owl-demo").html(content);
       }

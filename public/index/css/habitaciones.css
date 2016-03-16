@@ -11,29 +11,52 @@ section.Cont-Hab{
 	background-color: transparent;
 	padding: 25px;
 }
+.foto img{
+	width: 100%;
+	height: 100%;
+	max-width: 350px;
+}
 .desc{
 	height: 250px;
 	background-color:transparent;
 	padding: 25px;
+	
 }
 .Hab{
-	border: solid;
-	border-radius: 5px;
-	border-width: 1px;
-	margin-bottom: 40px;
+	border-bottom: solid;
+	border-width: 2px;
+	margin-bottom: 10px;
 }
 .desc-B{
 
 	display: block;
-	position: relative;
+	max-height: 250px;
 	width: 100%;
-	padding-right: 20px;
-	bottom: 0;
+	padding-top: 20px;
+
 }
-.tdes{
+.btnB{
 	display: block;
 	position: relative;
-	width: 100%;
-	height: 80%;
+	width: 90px;
+	padding:10px;
+	background-color: black;
+	text-decoration: none;
+	color: white;
+
+}
+.btnB:hover{
+	text-decoration: none;
+	color: white;
+	
+}
+.desc-B div{
+	
+}
+.tdes{
+	
+}
+.tdes h4{
+	margin-top: 0;
 	
 }

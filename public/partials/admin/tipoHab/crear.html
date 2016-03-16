@@ -1,4 +1,3 @@
-<div id="page-wrapper" ng-controller="habtipoController" ng-init="getHabTipo();">
 <div class="formularios">
 
     <form method="POST" action="admin/AddSubHab" accept-charset="UTF-8" enctype="multipart/form-data">
@@ -23,16 +22,6 @@
             <label for="tipo">Precio</label>
             <input class="form-control" placeholder="Numero de orden" required="required" name="precio" type="text" id="precio">
         </div>
-         <div class="form-group">
-            <label for="tipo">Tipo Habitacion</label>
-           <select id="habtipo_id" ng-model='habtipo_id' ng-options="habtipo.tipo for habtipo in  habtipos track by habtipo.id" class="form-control" name="habtipo_id">
-                    <option value="">Seleccione una Opción...</option>
-                </select>
-            </select>
-        </div>
-        
-        <!-- input invisile-->
-        <input ng-model="hotel_id"  required="required" name="hotel_id" type="text" id="hotel_id" value="{{hotel_id}}">
 
         <div class="form-group">
             
@@ -42,6 +31,6 @@
        
     </form>  
 </div>
-</div>
+
 
         

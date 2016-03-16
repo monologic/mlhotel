@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Habtipo extends Model
 {
 	public $timestamps = false;
-	protected $fillable = ['tipo', 'descripcion'];
+	protected $fillable = ['nombre', 'descripcion', 'precio', 'foto'];
 	 
-    public function habsubtipos()
+     public function habitacions()
     {
-        return $this->hasMany('App\Habsubtipo');
+        return $this->hasMany('App\Habitacion');
     }
 }
