@@ -4,24 +4,28 @@
 */
 
 .owl-theme .owl-controls{
-	margin-top: 10px;
+	 display: block;
+	 position: relative;
 	text-align: center;
+	margin-top:-20%;
+	margin-bottom:20%;
+	z-index: 20px;
 }
 
 /* Styling Next and Prev buttons */
 
 .owl-theme .owl-controls .owl-buttons div{
 	color: #FFF;
-	display: inline-block;
+	*display: inline-block;
 	zoom: 1;
-	*display: inline;/*IE7 life-saver */
+	display: inline;/*IE7 life-saver */
 	margin: 5px;
 	padding: 3px 10px;
-	font-size: 12px;
+	font-size: 6rem;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	border-radius: 30px;
-	background: #869791;
+	background: transparent;
 	filter: Alpha(Opacity=50);/*IE7 fix*/
 	opacity: 0.5;
 }
@@ -36,7 +40,7 @@
 /* Styling Pagination*/
 
 .owl-theme .owl-controls .owl-page{
-	display: inline-block;
+	display: none;
 	zoom: 1;
 	*display: inline;/*IE7 life-saver */
 }
@@ -76,4 +80,12 @@
 .owl-item.loading{
 	min-height: 150px;
 	background: url(AjaxLoader.gif) no-repeat center center
+}
+
+.owl-prev{
+float: left;
+}
+.owl-next{
+float: right;
+
 }

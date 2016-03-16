@@ -40,6 +40,7 @@ Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 });
 	Route::get('admin/getBanners', 'bannerController@getBanners');
 	Route::post('admin/SlidCreate', 'bannerController@sliderCreateIndex');
+	Route::get('admin/getBanners2', 'bannerController@getBanners2');
 	
 	Route::post('admin/AddSubHab', 'HabSubTipoController@SubHabitacionesStore');
 	Route::get('admin/getHabSubtipos', 'HabSubTipoController@getSubHabitaciones');

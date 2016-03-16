@@ -111,6 +111,13 @@ class bannerController extends Controller
 
         return response()->json( $Sliders );
     }
+     public function getBanners2()
+    {
+        $Sliders = Slider::all();
+        $Sliders = $Sliders -> toArray();
+        //return response()->json('item'=>$Sliders);
+        return response()->json(['items' => $Sliders]);
+    }
 
 
 }

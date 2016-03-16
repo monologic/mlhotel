@@ -394,12 +394,13 @@ if (typeof Object.create !== "function") {
             if (base.options.navigation === true || base.options.pagination === true) {
                 base.owlControls = $("<div class=\"owl-controls\"/>").toggleClass("clickable", !base.browser.isTouch).appendTo(base.$elem);
             }
-            if (base.options.pagination === true) {
-                base.buildPagination();
-            }
             if (base.options.navigation === true) {
                 base.buildButtons();
             }
+            if (base.options.pagination === true) {
+                base.buildPagination();
+            }
+            
         },
 
         buildButtons : function () {
@@ -408,12 +409,12 @@ if (typeof Object.create !== "function") {
             base.owlControls.append(buttonsWrapper);
 
             base.buttonPrev = $("<div/>", {
-                "class" : "owl-prev",
+                "class" : "owl-prev glyphicon glyphicon-chevron-left",
                 "html" : base.options.navigationText[0] || ""
             });
 
             base.buttonNext = $("<div/>", {
-                "class" : "owl-next",
+                "class" : "owl-next glyphicon glyphicon-chevron-right",
                 "html" : base.options.navigationText[1] || ""
             });
 
@@ -1469,7 +1470,7 @@ if (typeof Object.create !== "function") {
         stopOnHover : false,
 
         navigation : false,
-        navigationText : ["prev", "next"],
+        navigationText : ["", ""],
         rewindNav : true,
         scrollPerPage : false,
 

@@ -25,6 +25,18 @@
     <link rel="stylesheet" href="index/css/owl.transitions.css">
   
 </head>
+<style>
+#owl-demo{
+    top:-80px;
+}
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+</style>
 <body ng-app="homeApp">
     <nav class="navbar navbar-default" style="z-index:100">
         <div class="container">
@@ -67,12 +79,9 @@
             </div>
         </div>
     </nav>
-        <div ng-controller="habsubtipoController" ng-init="getHabSubtipos();">
+        <div ng-controller="bannerController" ng-init="getBanners2();">
             
             <div id="owl-demo" class="owl-carousel">
-              <div class="item"><img src="imagen/sliders/fullimage1.jpg" alt="The Last of us"></div>
-              <div class="item"><img src="imagen/sliders/fullimage2.jpg" alt="GTA V"></div>
-              <div class="item"><img src="imagen/sliders/fullimage3.jpg" alt="Mirror Edge"></div>
 
           </div>
 
@@ -110,25 +119,43 @@
     
     </script>
     <script>
-        $(document).ready(function() {
+      $(document).ready(function() {
  
-  $("#owl-demo").owlCarousel({
- 
-      navigation : true, // Show next and prev buttons
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true
- 
-      // "singleItem:true" is a shortcut for:
-      // items : 1, 
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
- 
-  });
- 
-});
+      $("#owl-demo").owlCarousel({
+         items : 1,
+         autoPlay: true, 
+         slideSpeed : 300,
+         paginationSpeed : 400,
+         singleItem:true,
+         navigation: true, 
+         responsive: true,
+         responsiveRefreshRate : 200,
+         responsiveBaseWidth: window,
+         singleItem : true,
+        transitionStyle : "fade",
+
+        
+
+
+        jsonPath : '/admin/getBanners2',
+        jsonSuccess : customDataSuccess
+
+      });
+     
+      function customDataSuccess(data){
+        var content = "";
+        for(var i in data["items"]){
+           
+         var imagen = data["items"][i].imagen;
+     
+           content += "<img src=imagen/Sliders/" +imagen+ " style='width:100%'>"
+        }
+        $("#owl-demo").html(content);
+      }
+     
+    });
+
+
     </script>
          
     
