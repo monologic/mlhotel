@@ -137,7 +137,7 @@
          responsiveRefreshRate : 200,
          responsiveBaseWidth: window,
          singleItem : true,
-        transitionStyle : "fade",
+         transitionStyle : "fade",
 
         
 
