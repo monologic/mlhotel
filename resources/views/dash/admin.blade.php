@@ -202,7 +202,6 @@
     <script src="plugins/js/controllers/hotelController.js"></script> 
     <script src="plugins/js/controllers/bannerController.js"></script> 
     <script src="plugins/js/controllers/habtipoController.js"></script>
-    <script src="plugins/js/controllers/habsubtipoController.js"></script>
     
 
     <script>

@@ -23,8 +23,13 @@ app.controller('habtipoController', function($scope,$http) {
 
         $scope.detalles = details;
         $scope.total = total;
-
-
     } 
+     $scope.eliminar = function (id) {
+        $http.delete( 'admin/AddHab/'+id ).then(function successCallback(response) {
+            $scope.habtipos = response.data;
+        }, function errorCallback(response) {
+            alert("Ha ocurrido un error, No se puede borrar datos utilizados para otros registros");
+        });
+    }
     
 });
