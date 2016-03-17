@@ -18,10 +18,15 @@
             <label for="descripcion">Descripcion</label>
             <textarea class="form-control trumbowyg-demo" required="required" name="descripcion" cols="50" rows="6" id="descripcion"></textarea>
         </div>
+        <div class="form-group">
+            <label for="tipo">Capacidad</label>
+            <input class="form-control" placeholder="Capacidad de huespedes" required="required" name="nropersonas" type="text" id="pnropersonas">
+        </div>
          <div class="form-group">
             <label for="tipo">Precio</label>
-            <input class="form-control" placeholder="Numero de orden" required="required" name="precio" type="text" id="precio">
+            <input class="form-control" placeholder="Precio de Habitacion" required="required" name="precio" type="text" id="precio">
         </div>
+        
 
         <div class="form-group">
             
@@ -30,7 +35,21 @@
 
        
     </form>  
+
 </div>
+
+<script>
+      
+      $('.trumbowyg-demo').trumbowyg({
+    fullscreenable: false,
+    closable: true,
+    btns: [ 'formatting',
+      '|', 'btnGrp-design',
+      '|', 'btnGrp-justify',
+      '|', 'btnGrp-lists',
+      ]
+});
+</script>
 
 
         

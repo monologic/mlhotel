@@ -24,7 +24,7 @@
     <link rel="stylesheet" type="text/css" href="plugins/multilevel/css/organicfoodicons.css" />
      <link rel="stylesheet" type="text/css" href="plugins/css/kira.css" />
     <!-- demo styles -->
-
+     <link rel="stylesheet" href="plugins/Trumbowyg/ui/trumbowyg.min.css">
     <link rel="stylesheet" type="text/css" href="plugins/multilevel/css/demo.css" />
     <!-- menu styles -->
     <link rel="stylesheet" type="text/css" href="plugins/multilevel/css/component.css" />
@@ -190,6 +190,8 @@
     <script src="plugins/multilevel/js/classie.js"></script>
     <script src="plugins/multilevel/js/dummydata.js"></script>
     <script src="plugins/multilevel/js/main.js"></script>
+
+    <script src="plugins/Trumbowyg/trumbowyg.min.js"></script> 
 
     <!-- Controladrores de Angular -->
 

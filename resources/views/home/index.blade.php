@@ -23,6 +23,10 @@
     <link rel="stylesheet" href="index/css/owl.carousel.css">
     <link rel="stylesheet" href="index/css/owl.theme.css">
     <link rel="stylesheet" href="index/css/owl.transitions.css">
+     <!-- text tarea-->
+    <link rel="stylesheet" href="index/css/owl.transitions.css">
+   
+
   
 </head>
 <style>
@@ -109,6 +113,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <script src="index/js/owl.carousel.js"></script> 
+     
 
     <!--JS principal -->
     <script src="{{ asset('plugins/js/mainHome.js') }}"></script>

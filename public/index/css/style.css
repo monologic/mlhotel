@@ -40,8 +40,11 @@
   text-align: center;
   background-color: white;
   border-radius:5px 0px 0px 5px; 
-  color: black;
+  color: blue;
   font-size: 2rem;
+}
+.iconno:active{
+  display: none;
 }
 .total{
   display: inline-block;

@@ -12,6 +12,7 @@
         <div class="desc col-md-6 col-sm-6">
           <div class="tdes">
              <h4>{{y.nombre}}</h4>
+             <p>Capacidad: {{y.nropersonas}} personas</p>
              <p>{{y.descripcion}}</p>
           </div> 
         </div> 
@@ -38,7 +39,10 @@
                 <th>{{$index+1}}</th>
                 <th>{{z.nombre}}</th>
                 <th>{{z.precio}}</th>
-                
+                <th>{{z.nropersonas}}</th>
+                <th>
+                  <a class="btn btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                </th>
               </tr>
               </thead>
               <tbody>
@@ -47,7 +51,7 @@
               
           </table>
           <div class="costo">
-            <div>Total: </div><div>40</div>
+            <div>Total: </div><div></div>
           </div>
             <br>
 

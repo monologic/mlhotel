@@ -14,11 +14,7 @@ app.controller('habtipoController', function($scope,$http) {
 
     var details = Array();
     $scope.addDetalleReserva =function (data) {
-
-
-
-        details.push(data);
-
+      details.push(data);
       var total = 0;
 
       for (var i = 0; i < details.length; i++) {
@@ -26,7 +22,7 @@ app.controller('habtipoController', function($scope,$http) {
       }
 
         $scope.detalles = details;
-      $scope.total = total;
+        $scope.total = total;
 
 
     } 
