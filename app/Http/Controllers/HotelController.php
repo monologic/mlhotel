@@ -199,8 +199,13 @@ class HotelController extends Controller
 
     public function dataEditar(Request $request)
     {
-        
         $url = explode("=", $request->url['hash']);
         dd($url[1]);
+    }
+
+    public function getHotelesSimple()
+    {
+        $hoteles = Hotel::all();
+        return response()->json( $hoteles->toArray() );   
     }
 }

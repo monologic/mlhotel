@@ -11,7 +11,7 @@
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="favicon.ico">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="plugins/angular/jquery.min.js"></script>
 
     <!-- Latest compiled and minified CSS -->
 
@@ -19,7 +19,7 @@
     
     <link rel="stylesheet" type="text/css" href="plugins/css/bootstrap.css" />
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="plugins/js/bootstrap.min.js""></script>
     <!-- food icons -->
     <link rel="stylesheet" type="text/css" href="plugins/multilevel/css/organicfoodicons.css" />
      <link rel="stylesheet" type="text/css" href="plugins/css/kira.css" />
@@ -133,6 +133,7 @@
                     <li role="separador" class="menu__item"><a class="menu__separador" href="#"></a></li>
                     <li class="menu__item"><a class="menu__link" href="#/Hoteles">Hotel</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/Cargos/crear">Crear Cargos</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#/Empleados">Empleados y Usuarios</a></li>
                 </ul>
             </div>
         </nav>
@@ -179,8 +180,8 @@
         </div>
     </div>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+    <script src="plugins/angular/angular.min.js"></script>
+    <script src="plugins/angular/angular-route.min.js"></script>
 
 
         <!-- Our Website Javascripts -->
@@ -202,6 +203,7 @@
     <script src="plugins/js/controllers/hotelController.js"></script> 
     <script src="plugins/js/controllers/bannerController.js"></script> 
     <script src="plugins/js/controllers/habtipoController.js"></script>
+    <script src="plugins/js/controllers/personalController.js"></script>
     
 
     <script>
