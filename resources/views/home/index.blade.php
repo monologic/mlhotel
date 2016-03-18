@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="index/css/style.css">
     <link rel="stylesheet" href="index/css/habitaciones.css">
 
-    <link rel="stylesheet" type="text/css" href="plugins/css/bootstrap-kira.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/css/bootstrap.css" />
 
     <!-- Sliders-->
     <link rel="stylesheet" href="index/css/owl.carousel.css">
@@ -42,7 +42,9 @@
 }
 
 #owl-demo{
-    top:-80px;
+    margin-top:100px;
+    display: block;
+
 }
 #owl-demo .item img{
     display: block;
@@ -53,61 +55,64 @@
 
 </style>
 <body ng-app="homeApp">
-    <nav class="navbar navbar-default" style="z-index:100">
-        <div class="container">
-            <div class="navbar-header">
+ <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header navbar-left">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Residencial Moquegua
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Galeria</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Contactenos</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-        <div ng-controller="bannerController" ng-init="getBanners2();">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Habitaciones</a></li>
+        <li><a href="#">Galeria</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contactos <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div ng-controller="bannerController" ng-init="getBanners2();">
             
-            <div id="owl-demo" class="owl-carousel">
+<div id="owl-demo" class="owl-carousel">
 
-          </div>
+</div>
 
-        </div>
+</div>
             
-        <div ng-view></div>
+<div ng-view></div>
 
-  <footer class="pie">
+<footer class="pie">
     
-  </footer>
+</footer>
+
+
 
      <!-- Llamado a angular-->
-
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
 
     <script src="index/js/wow.min.js"></script>  
    
     <!-- Angular-Bootrstrap UI --> 
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
 
      <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
