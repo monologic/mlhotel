@@ -24,12 +24,42 @@ app.controller('habtipoController', function($scope,$http) {
         $scope.detalles = details;
         $scope.total = total;
     } 
+
+
      $scope.eliminar = function (id) {
-        $http.delete( 'admin/AddHab/'+id ).then(function successCallback(response) {
+        $http.delete( 'admin/habtipo/'+id ).then(function successCallback(response) {
             $scope.habtipos = response.data;
         }, function errorCallback(response) {
             alert("Ha ocurrido un error, No se puede borrar datos utilizados para otros registros");
         });
     }
+
+
+    var idHabtipo;
+
+    $scope.dataEditar = function (data) {
+
+        idHabtipo = data.id;
+
+        $scope.mltitulo = data.titulo;
+        $scope.mlimagen = data.imagen;
+        $scope.mlestado = data.estado;
+        $scope.mlorden = data.orden;
+    }
+
+       $scope.editarHabtipo = function () {
+
+        $http.put('admin/habtipo/'+idHabtipo,
+            {   'nombre':$scope.mltitulo,
+                'pais':$scope.mlimagen,
+                'estado':$scope.mlestado,
+                'orden':$scope.mlorden,
+            }).then(function successCallback(response) {
+                 $scope.habtipos = response.data;
+            }, function errorCallback(response) {
+                
+            });
+    }
+
     
 });

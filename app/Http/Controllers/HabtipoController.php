@@ -84,12 +84,14 @@ class HabtipoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
+
     {
         // 
         Habtipo::destroy($id);
 
         return $this->getHabitaciones();
     }
+
       public function HabitacionesStore(Request $request)
     {
        if($request->file('imagen'))
@@ -109,6 +111,13 @@ class HabtipoController extends Controller
         $Habtipos = Habtipo::all();
         $Habtipos = $Habtipos ->toArray();
         return response()->json( $Habtipos );
+    }
+
+     public function dataEditar(Request $request)
+    {
+        
+        $url = explode("=", $request->url['hash']);
+        dd($url[1]);
     }
 
 }

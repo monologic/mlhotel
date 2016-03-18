@@ -72,7 +72,17 @@ class bannerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $banner = Slider::find($id);
+        dd($request);
+        $banner->fill($request->all());
+        $banner->save();
+
+        $res = $this->getBanners();
+
+        return $res;
+
+
     }
 
     /**
@@ -83,7 +93,9 @@ class bannerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Slider::destroy($id);
+
+        return $this-> getBanners();
     }
     public function sliderCreateIndex(Request $request)
     {
@@ -119,5 +131,26 @@ class bannerController extends Controller
         return response()->json(['items' => $Sliders]);
     }
 
+      public function dataEditar(Request $request)
+    {
+        
+        $url = explode("=", $request->url['hash']);
+        dd($url[1]);
+    }
+
+    public function updateSlider(Request $request, $id)
+    {
+        
+        //$upbanner = Slider::find($id);
+        dd($request->all());
+        //$banner->fill($request->all());
+        //$banner->save();
+
+        //$res = $this->getBanners();
+
+        //return $res;
+
+
+    }
 
 }
