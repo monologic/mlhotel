@@ -25,15 +25,19 @@
     <link rel="stylesheet" href="index/css/owl.transitions.css">
      <!-- text tarea-->
     <link rel="stylesheet" href="index/css/owl.transitions.css">
+    <!-- galery-->
    
 
+  <link rel='stylesheet' href='plugins/galery/css/jquery.fancybox.min.css'/>
   
 </head>
 <style>
 .pie{
+
   margin-top: 80px;
   display: block;
   position: relative;
+  bottom: 0;
   color: white;
   width: 100%;
   background-color: black;
@@ -52,7 +56,11 @@
     height: auto;
 }
 
-
+.gallery
+{
+    display: inline-block;
+    margin-top: 20px;
+}
 </style>
 <body ng-app="homeApp">
  <nav class="navbar navbar-default navbar-fixed-top">
@@ -72,7 +80,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Habitaciones</a></li>
-        <li><a href="#">Galeria</a></li>
+        <li><a href="#/galeria">Galeria</a></li>
         <li><a href="#">Servicios</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contactos <span class="caret"></span></a>
@@ -98,12 +106,14 @@
             
 <div ng-view></div>
 
+
 <footer class="pie">
     
 </footer>
 
-
-
+   
+      
+    
      <!-- Llamado a angular-->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
@@ -127,11 +137,29 @@
 
     <script src="plugins/js/controllers/bannerController.js"></script>  
     <script src="plugins/js/controllers/habtipoController.js"></script>
+    <script src="plugins/js/controllers/galeryController.js"></script>
+  
+    <link rel='stylesheet' href='plugins/galery/css/jquery.fancybox.min.css'/>
+   <script src="plugins/galery/js/jquery.fancybox.min.js"></script>
+
+   <script>
+    $(document).ready(function(){
+    //FANCYBOX
+    //https://github.com/fancyapps/fancyBox
+    $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+});
+   </script> 
+
     
     <script>
     new WOW().init();
     
     </script>
+
+
     <script>
       $(document).ready(function() {
  
@@ -172,9 +200,5 @@
 
 
     </script>
-         
-    
-
-
 </body>
 </html>

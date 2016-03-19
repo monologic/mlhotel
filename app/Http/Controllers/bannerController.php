@@ -74,10 +74,8 @@ class bannerController extends Controller
     {
         
         $banner = Slider::find($id);
-        dd($request);
         $banner->fill($request->all());
         $banner->save();
-
         $res = $this->getBanners();
 
         return $res;
@@ -96,6 +94,7 @@ class bannerController extends Controller
         Slider::destroy($id);
 
         return $this-> getBanners();
+        return redirect('admin#/LisBanner');
     }
     public function sliderCreateIndex(Request $request)
     {
@@ -111,7 +110,7 @@ class bannerController extends Controller
 
         $slider->imagen = $name;
          $slider->save();
-         return redirect('admin#/Banner');
+         return redirect('admin#/LisBanner');
 
 
     }

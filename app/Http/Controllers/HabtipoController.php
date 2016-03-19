@@ -74,7 +74,12 @@ class HabtipoController extends Controller
      */
     public function update(Request $request, $id)
     {
-      
+         $tipohab = Habtipo::find($id);
+        $tipohab->fill($request->all());
+        $tipohab->save();
+        $resp = $this->getHabitaciones();
+
+        return $resp;
     }
 
     /**

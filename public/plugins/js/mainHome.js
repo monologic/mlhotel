@@ -1,6 +1,6 @@
 
  var app = angular.module('homeApp', [
-  'ngRoute'
+  'ngRoute',
 ]);
 
 
@@ -14,11 +14,11 @@ app.config(['$routeProvider', function ($routeProvider) {
 
     // Panel de Control de Admin
     .when("/", {templateUrl: "index/home.html", controller: "PageCtrl"})
+    .when("/galeria", {templateUrl: "index/galery.html", controller: "PageCtrl"})
     // Pages
     /*
         Rutas relacionadas a empleados
     */
-    .when("/Usuario/crear", {templateUrl: "partials/usuariotipo/crear.html", controller: "PageCtrl"})
 
     // else 404
     .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});

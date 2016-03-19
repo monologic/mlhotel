@@ -17,28 +17,24 @@ app.controller('bannerController', function($scope,$http) {
         idBanner = data.id;
         $scope.idslider=data.id;
         $scope.mltitulo = data.titulo;
+        $scope.mlcontenido = data.contenido;
         $scope.mlestado = data.estado;
         $scope.mlorden = data.orden;
     }
+     $scope.editarBanner = function () {
 
-       $scope.editarBanner = function () {
-
-            var formData = new FormData($("#formulario")[1]);
-
-            console.log($("#formulario"));
-            var ruta = "admin/editSlider/"+idBanner;
-            $.ajax({
-                url: ruta,
-                type: "PUT",
-                data: formData,
-                contentType: false,
-                processData: false,
-                success: function(data)
-                {
-                    $("#respuesta").html(datos);
-                }
+        $http.put('admin/banner/'+idBanner,
+            {   'titulo':$scope.mltitulo,
+                'contenido':$scope.mlcontenido,
+                'estado':$scope.mlestado,
+                'orden':$scope.mlorden,
+            }).then(function successCallback(response) {
+                 $scope.banners = response.data;
+            }, function errorCallback(response) {
+                
             });
     }
+
      $scope.eliminar = function (id) {
         $http.delete( 'admin/banner/'+id ).then(function successCallback(response) {
             $scope.bannersv = response.data;

@@ -56,8 +56,8 @@
                             <input type="text" class="form-control" id="titulo" placeholder="Titulo o nomnbre" ng-model="mltitulo">
                         </div>
                         <div class="form-group ">
-                            <label for="imagen">Imagen</label>
-                            <input type="file" class="form-control" id="imagen" placeholder="" name="imagen">
+                            <label for="titulo">Contenido</label>
+                            <input type="textarea" class="form-control" id="titulo" ng-model="mlcontenido">
                         </div>
                         <div class="form-group ">
                             <label for="estado">Estado</label>
@@ -69,10 +69,10 @@
                         </div>
                     
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default"  data-dismiss="modal">Close</button>
-                    <input class="btn btn-primary" ng-click="editarBanner();" value="Guardar">
+                     </div>
+                 <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <a href="" class="btn btn-primary" ng-click="editarBanner();" data-dismiss="modal">Guardar</a>
                 </div>
             </div>
         </div>
