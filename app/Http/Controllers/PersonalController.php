@@ -15,14 +15,14 @@ class PersonalController extends Controller
 {
     public function buscar(Request $request)
     {
-    	$personal = Empleado::where('hotel_id', $request->hotel);
+    	$personal = Empleado::where('hotel_id', $request->hotel)->get();
 
     	$personal->each(function ($personal) {
     		$personal->emptipo;
 		});
 
 		$personal = $personal->toArray();
-    		
-    	dd($personal);
+
+        return response()->json($personal);
     }
 }

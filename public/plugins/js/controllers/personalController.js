@@ -16,10 +16,14 @@ app.controller('personalController', function($scope,$http) {
 			modelo : $('#modelo').val(),
 			hotel : $('#hotel').val()
 		}).then(function successCallback(response) {
-            $scope.hoteles = response.data;
+            $scope.personal = response.data;
         }, function errorCallback(response) {
         // called asynchronously if an error occurs
         // or server returns response with an error status.
         });
+	}
+	$scope.cabeceraTabla = function() {
+		$scope.tModelo = $('#modelo').val();
+		$scope.tHotel = $('#hotel').val();
 	}
 });
