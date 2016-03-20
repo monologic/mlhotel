@@ -20,20 +20,9 @@ app.controller('habtipoController', function($scope,$http) {
       for (var i = 0; i < details.length; i++) {
         total += details[i].precio;
       }
-
         $scope.detalles = details;
         $scope.total = total;
     } 
-
-
-     $scope.eliminar = function (id) {
-        $http.delete( 'admin/habtipo/'+id ).then(function successCallback(response) {
-            $scope.habtipos = response.data;
-        }, function errorCallback(response) {
-            alert("Ha ocurrido un error, No se puede borrar datos utilizados para otros registros");
-        });
-    }
-
 
     var idHabtipo;
 
@@ -41,24 +30,31 @@ app.controller('habtipoController', function($scope,$http) {
 
         idHabtipo = data.id;
 
-        $scope.mltitulo = data.titulo;
-        $scope.mlimagen = data.imagen;
-        $scope.mlestado = data.estado;
-        $scope.mlorden = data.orden;
+        $scope.mlnombre = data.nombre;
+        $scope.mldescripcion = data.descripcion;
+        $scope.mlnropersonas = data.nropersonas;
+        $scope.mlprecio = data.precio;
     }
 
        $scope.editarHabtipo = function () {
 
         $http.put('admin/habtipo/'+idHabtipo,
-            {   'nombre':$scope.mltitulo,
-                'pais':$scope.mlimagen,
-                'estado':$scope.mlestado,
-                'orden':$scope.mlorden,
+            {   'nombre':$scope.mlnombre,
+                'descripcion':$scope.mldescripcion,
+                'nropersonas':$scope.mlnropersonas,
+                'precio':$scope.mlprecio,
             }).then(function successCallback(response) {
                  $scope.habtipos = response.data;
             }, function errorCallback(response) {
                 
             });
+    }
+    $scope.eliminar = function (id) {
+        $http.delete( 'admin/habtipo/'+id ).then(function successCallback(response) {
+            $scope.habtipos = response.data;
+        }, function errorCallback(response) {
+            alert("Ha ocurrido un error, No se puede borrar datos utilizados para otros registros");
+        });
     }
 
     

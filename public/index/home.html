@@ -1,11 +1,19 @@
 
-  <div >
-  
-     <section class="Cont-Hab" ng-controller="habtipoController" ng-init="getHabTipo();">
+<div ng-controller="bannerController" ng-init="getBanners2();" style="min-height:300px">
+            
+  <div id="owl-demo" class="owl-carousel" style="min-height:300px">
 
-      <div class="Hab row" ng-repeat="y in habtipos">
+</div>
 
-        <div class="foto col-md-4 col-sm-4">
+  <div>
+
+
+    <h3 class="text-center wow fadeInDown" data-wow-duration="2s"  data-wow-delay="2s" style="display:block;position:relative;top:20px;margin-bottom:20px">Te Ofrecelos las siguientes Habitaciones</h3>
+     <section class="Cont-Hab" ng-controller="habtipoController" ng-init="getHabTipo();" style="min-height:300px;top:20px">
+    
+      <div class="Hab row wow fadeInUp" data-wow-duration="2s"  data-wow-delay="0.5s" ng-repeat="y in habtipos">
+          
+        <div class="foto col-md-4 col-sm-4 " style="margin-top:10px">
           <img src="imagen/habitaciones/{{y.foto}} ">
         </div>
 
@@ -13,7 +21,7 @@
           <div class="tdes">
              <h4>{{y.nombre}}</h4>
              <p>Capacidad: {{y.nropersonas}} personas</p>
-             <p>{{y.descripcion}}</p>
+             <div> {{y.descripcion}} </div>
           </div> 
         </div> 
 
@@ -21,7 +29,7 @@
           <div>
             <h4 class="text-center">Desde</h4>
             <p class="text-center">{{y.precio}}</p>
-            <a href="" class="btnB"  ng-click="addDetalleReserva(y);"> + Reservar</a>
+            <a href="" class="btnB center-block "  ng-click="addDetalleReserva(y);"> + Reservar</a>
           </div>       
         </div>     
       </div>
@@ -61,6 +69,43 @@
 
   </section>         
   </div>
+
+   <script>
+      $(document).ready(function() {
+ 
+      $("#owl-demo").owlCarousel({
+
+         items : 1,
+         autoPlay: true, 
+         slideSpeed : 300,
+         paginationSpeed : 900,
+         singleItem:true,
+         navigation: false, 
+         responsive: true,
+         responsiveRefreshRate : 200,
+         responsiveBaseWidth: window,
+         singleItem : true,
+         transitionStyle : "fade",
+        jsonPath : '/admin/getBanners2',
+        jsonSuccess : customDataSuccess
+
+      });
+     
+      function customDataSuccess(data){
+        var content = "";
+        for(var i in data["items"]){
+           
+         var imagen = data["items"][i].imagen;
+     
+           content += "<img src=imagen/Sliders/" +imagen+ " style='width:100%;  max-height: 650px; min-height:300px'>"
+        }
+        $("#owl-demo").html(content);
+      }
+     
+    });
+
+
+    </script>
 
   
    

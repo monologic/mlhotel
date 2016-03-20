@@ -6,11 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Galeria;
 
-use Illuminate\Support\Facades\Auth;
-use App\Habtipo;
-
-class HabtipoController extends Controller
+class GaleryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -74,12 +72,7 @@ class HabtipoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $tipohab = Habtipo::find($id);
-        $tipohab->fill($request->all());
-        $tipohab->save();
-        $resp = $this->getHabitaciones();
-
-        return $resp;
+        //
     }
 
     /**
@@ -89,40 +82,31 @@ class HabtipoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-
     {
-        // 
-        Habtipo::destroy($id);
-
-        return $this->getHabitaciones();
+        //
     }
 
-      public function HabitacionesStore(Request $request)
-    {
-       if($request->file('imagen'))
-        {
-            $file = $request -> file('imagen');
-            $name = 'Habtipo_'. time() . '.' .$file->getClientOriginalExtension();
-            $path=public_path() . "/imagen/habitaciones/";
-            $file -> move($path,$name);
-        }
-        $Habtipo = new Habtipo($request->all());
-        $Habtipo->foto = $name;
-        $Habtipo->save();
-         return redirect('admin#/LisHab');
-    }
-     public function getHabitaciones()
-    {
-        $Habtipos = Habtipo::all();
-        $Habtipos = $Habtipos ->toArray();
-        return response()->json( $Habtipos );
-    }
-
-     public function dataEditar(Request $request)
+    public function AddGaleryPhoto(Request $request)
     {
         
-        $url = explode("=", $request->url['hash']);
-        dd($url[1]);
+      if($request->file('imagen'))
+        {
+            $file = $request -> file('imagen');
+            $name = 'Galery_'. time() . '.' .$file->getClientOriginalExtension();
+            $path=public_path() . "/imagen/galery/";
+            $file -> move($path,$name);
+        }
+        $foto = new Galeria($request->all());
+
+        $foto->imagen = $name;
+         $foto->save();
+         return redirect('admin#/LisGaleria');
     }
 
+    public function getGaleriaFotos()
+    {
+        $fotos = Galeria::all();
+        $fotos = $fotos ->toArray();
+        return response()->json( $fotos );
+    }
 }

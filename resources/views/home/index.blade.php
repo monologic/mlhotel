@@ -42,7 +42,6 @@
   width: 100%;
   background-color: black;
   min-height:200px; 
-
 }
 
 #owl-demo{
@@ -73,7 +72,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a class="navbar-brand " href="#">Brand</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -96,15 +95,11 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div ng-controller="bannerController" ng-init="getBanners2();">
-            
-<div id="owl-demo" class="owl-carousel">
 
-</div>
 
 </div>
             
-<div ng-view></div>
+<div ng-view  style="margin-botton:50px"></div>
 
 
 <footer class="pie">
@@ -159,46 +154,5 @@
     
     </script>
 
-
-    <script>
-      $(document).ready(function() {
- 
-      $("#owl-demo").owlCarousel({
-
-         items : 1,
-         autoPlay: true, 
-         slideSpeed : 300,
-         paginationSpeed : 900,
-         singleItem:true,
-         navigation: false, 
-         responsive: true,
-         responsiveRefreshRate : 200,
-         responsiveBaseWidth: window,
-         singleItem : true,
-         transitionStyle : "fade",
-
-        
-
-
-        jsonPath : '/admin/getBanners2',
-        jsonSuccess : customDataSuccess
-
-      });
-     
-      function customDataSuccess(data){
-        var content = "";
-        for(var i in data["items"]){
-           
-         var imagen = data["items"][i].imagen;
-     
-           content += "<img src=imagen/Sliders/" +imagen+ " style='width:100%;  max-height: 650px;'>"
-        }
-        $("#owl-demo").html(content);
-      }
-     
-    });
-
-
-    </script>
 </body>
 </html>

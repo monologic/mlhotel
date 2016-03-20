@@ -24,6 +24,7 @@ Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 	Route::resource('usuario', 'UsuarioController');
 	Route::resource('hotel', 'HotelController');
 	Route::resource('banner', 'bannerController');
+	Route::resource('habtipo', 'HabtipoController');
 
 	Route::get('getEmptipos', 'EmptipoController@getEmptipos');
 	Route::get('getEmpForUsers', 'empleadoController@getEmpleadosParaUsuarios');
@@ -46,6 +47,9 @@ Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 	Route::post('admin/SlidCreate', 'bannerController@sliderCreateIndex');
 	Route::post('admin/AddSubHab', 'HabTipoController@HabitacionesStore');
 	Route::get('admin/AddHab', 'HabtipoController@getHabitaciones');
+
+	Route::post('admin/AddFoto', 'GaleryController@AddGaleryPhoto');
+	Route::get('admin/getGaleryPhoto', 'GaleryController@getGaleriaFotos');
 	
 
 

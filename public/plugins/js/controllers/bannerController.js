@@ -37,7 +37,7 @@ app.controller('bannerController', function($scope,$http) {
 
      $scope.eliminar = function (id) {
         $http.delete( 'admin/banner/'+id ).then(function successCallback(response) {
-            $scope.bannersv = response.data;
+            $scope.banners = response.data;
         }, function errorCallback(response) {
             alert("Ha ocurrido un error, No se puede borrar datos utilizados para otros registros");
         });
