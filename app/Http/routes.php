@@ -31,6 +31,7 @@ Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 	Route::get('getUsuarioTipos', 'UsuariotipoController@getUsuarioTipos');
 	Route::get('getHoteles', 'HotelController@getHoteles');
 	Route::get('getHotelesSimple', 'HotelController@getHotelesSimple');
+	Route::get('getContactos', 'ContactoController@getContactos');
 
 	
 	Route::post('crearAdminHotel', 'HotelController@crearAdminHotel');
@@ -50,7 +51,11 @@ Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 
 	Route::post('admin/AddFoto', 'GaleryController@AddGaleryPhoto');
 	Route::get('admin/getGaleryPhoto', 'GaleryController@getGaleriaFotos');
-	
+
+	Route::get('admin/getNoticias', 'NoticiaController@getNoticias');
+	Route::post('admin/NoticiaCreate', 'NoticiaController@NoticiaCreateIndex');
+
+	Route::post('enviarmsj', 'ContactoController@NewContacto');
 
 
 

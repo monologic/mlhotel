@@ -72,7 +72,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand " href="#">Brand</a>
+      <a class="navbar-brand " href="#">Hotel Moquegua</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -81,8 +81,9 @@
         <li><a href="#">Habitaciones</a></li>
         <li><a href="#/galeria">Galeria</a></li>
         <li><a href="#">Servicios</a></li>
+        <li><a href="#/noticias">Noticias</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contactos <span class="caret"></span></a>
+          <a href="#/contacto" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contactos <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
@@ -104,11 +105,7 @@
 
 <footer class="pie">
     
-</footer>
-
-   
-      
-    
+</footer>   
      <!-- Llamado a angular-->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
@@ -133,6 +130,7 @@
     <script src="plugins/js/controllers/bannerController.js"></script>  
     <script src="plugins/js/controllers/habtipoController.js"></script>
     <script src="plugins/js/controllers/galeryController.js"></script>
+    <script src="plugins/js/controllers/noticiaController.js"></script>
   
     <link rel='stylesheet' href='plugins/galery/css/jquery.fancybox.min.css'/>
    <script src="plugins/galery/js/jquery.fancybox.min.js"></script>

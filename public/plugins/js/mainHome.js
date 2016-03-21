@@ -15,6 +15,8 @@ app.config(['$routeProvider', function ($routeProvider) {
     // Panel de Control de Admin
     .when("/", {templateUrl: "index/home.html", controller: "PageCtrl"})
     .when("/galeria", {templateUrl: "index/galery.html", controller: "PageCtrl"})
+    .when("/noticias", {templateUrl: "index/noticias.html", controller: "PageCtrl"})
+    .when("/contacto", {templateUrl: "index/contacto.html", controller: "PageCtrl"})
     // Pages
     /*
         Rutas relacionadas a empleados

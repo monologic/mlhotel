@@ -1,0 +1,22 @@
+<div class="container contacto">
+	<form  method="POST" action="enviarmsj" class="con-form col-sm-6 col-xs-12"  enctype="multipart/form-data">
+		<div class="form-group">
+	        <label for="nombre">Nombre</label>
+	        <input class="form-control" placeholder="Opcional si decea"  name="nombre" type="text" id="nombre">
+	    </div>	
+	  	<div class="form-group">
+	        <label for="nombre">Asunto</label>
+	        <input class="form-control" placeholder="Escriba su nombre" required="required" name="asunto" type="text" id="asunto">
+	    </div>
+		<div class="form-group">
+		    <label for="exampleInputEmail1">Correo</label>
+		    <input type="email" class="form-control" id="correo" placeholder="Email" name="correo">
+	  	</div>	
+	  	<div class="fomr-group">
+	  		 <label for="tipo">Mensaje</label>
+			 <textarea class="form-control" rows="3" id="mensaje" name="mensaje"></textarea>
+	  	</div>
+	  	<br>
+	  	<input type="submit" class="btn btn-primary" value="Enviar">
+	</form>
+</div>

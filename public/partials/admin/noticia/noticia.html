@@ -1,0 +1,50 @@
+
+<div class="formularios">
+
+    <form method="POST" action="admin/NoticiaCreate" accept-charset="UTF-8" enctype="multipart/form-data">
+    <br><br>
+        <h2 class="tit2">Agregar Noticia</h2>
+        <br><br>
+        <div class="form-group">
+            <label for="tipo">Titulo</label>
+            <input class="form-control" placeholder="Titulo del banner" required="required" name="titulo" type="text" id="titulo">
+        </div>
+
+        <div class="form-group">
+            <label for="foto">Seleccione imagen</label>
+            <input name="imagen" type="file" id="imagen">
+        </div>
+
+        <div class="form-group">
+            <label for="descripcion">Contenido</label>
+            <textarea class="form-control trumbowyg-demo" required="required" name="contenido" cols="50" rows="5" id="contenido"></textarea>
+        </div>
+         
+        <div class="form-group">
+            <label for="descripcion">Fecha</label>
+            <input type="date" class="form-control" id="fecha" name="fecha" required="required" >
+        </div>
+        <div class="form-group">
+            
+            
+        </div>
+
+         <div class="form-group">
+            <label for="tipo">Fuente o Autor</label>
+            <input class="form-control" placeholder="Quien escribio en articulo" required="required" name="fuente" type="text" id="fuente">
+        </div>
+       <div class="form-group">
+            <label for="tipo">Estado</label>
+            <select class="form-control" required="required" name="estado" type="text" id="estado">
+              <option value="">Selecciones una opcion...</option>
+              <option value="Activo">Activo</option>
+              <option value="Inactivo">Inactivo</option>
+            </select>
+        </div>
+        <br>
+        <input class="btn btn-primary" type="submit" value="Guardar Noticia">
+        <br><br><br>
+    </form>  
+</div>
+
+        

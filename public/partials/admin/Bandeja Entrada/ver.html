@@ -1,0 +1,60 @@
+<div id="page-wrapper" ng-controller="contactoController" ng-init="getContacto();">
+    <br><br><br>
+    <h3 class="tit2">Bandeja de entrada</h3>
+    <br><br>
+    
+
+    <table class="table table-hover">
+
+    	<thead>
+    		<tr> 
+                <th>Fecha y Hora</th>
+    			<th>Asunto</th>
+                <th>Correo</th>
+                <th>Accion</th>
+    		</tr>
+    	</thead>
+    	<tbody>
+    		<tr ng-repeat="x in contactos">
+                <td >{{x.updated_at}}</td>
+                <td >{{x.asunto}}</td>
+                <td >{{x.correo}}</td>
+                
+                <td>
+                	<a href="" ng-click="dataEditar(x);" data-toggle="modal" data-target="#editar" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+
+                	<button ng-click="eliminar(x.id);" class="btn btn-danger"> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                </td>
+
+			  </tr>
+    	</tbody>
+  	</table>
+
+
+    <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="editarModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title" id="myModalLabel">Asunto: <label for=""  ng-bind="mlasunto"></label> </h2>
+                    <h4 class="modal-title">De: <label for=""  ng-bind="mlcorreo"></label>  </h4>
+                </div>
+                <div class="modal-body">
+                    <blockquote style="color:#4183D7;border-color:#4183D7;font-size:1.5rem">
+                      <p>Nombre:  <label for="" ng-bind="mlnombre" ></label></p>
+                      <p>Fecha y Hora:  <label for="" ng-bind="mldatetime" ></label></p>
+                    </blockquote>
+
+                     <div class="form-group ">
+                            <label for="titulo" style="color:#4183D7">Mensaje</label><br>
+                            <label for="" ng-bind="mlmensaje" style="color:black;font-size:1.8rem" ></label>     
+                    </div>
+
+                   
+                </div>
+                 <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerra</button>
+                    <a href="" class="btn btn-primary" ng-click="editarBanner();" data-dismiss="modal">Ok</a>
+                </div>
+            </div>
+        </div>

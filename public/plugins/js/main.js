@@ -34,12 +34,17 @@ app.config(['$routeProvider', function ($routeProvider) {
      .when("/Galeria", {templateUrl: "partials/admin/Galeria/galeria.html", controller: "PageCtrl"})
     .when("/LisGaleria", {templateUrl: "partials/admin/Galeria/ver.html", controller: "PageCtrl"})
 
+     .when("/Noticias", {templateUrl: "partials/admin/noticia/noticia.html", controller: "PageCtrl"})
+    .when("/LisNoticias", {templateUrl: "partials/admin/noticia/ver.html", controller: "PageCtrl"})
+
     .when("/tipoHab", {templateUrl: "partials/admin/TipoHab/crear.html", controller: "PageCtrl"})
     .when("/LisHab", {templateUrl: "partials/admin/TipoHab/ver.html", controller: "PageCtrl"})
 
     .when("/Hoteles", {templateUrl: "partials/admin/hotel/ver.html", controller: "PageCtrl"})
     .when("/Hoteles/crear", {templateUrl: "partials/admin/hotel/crear.html", controller: "PageCtrl"})
     .when("/Hoteles/editar", {templateUrl: "partials/admin/hotel/editar.html", controller: "PageCtrl"})
+
+    .when("/BandejaEntrada", {templateUrl: "partials/admin/Bandeja Entrada/ver.html", controller: "PageCtrl"})
 
     .when("/Empleados", {templateUrl: "partials/admin/personal/ver.html", controller: "PageCtrl"})
 
