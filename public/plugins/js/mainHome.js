@@ -17,6 +17,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     .when("/galeria", {templateUrl: "index/galery.html", controller: "PageCtrl"})
     .when("/noticias", {templateUrl: "index/noticias.html", controller: "PageCtrl"})
     .when("/contacto", {templateUrl: "index/contacto.html", controller: "PageCtrl"})
+    .when("/habitaciones", {templateUrl: "index/habitaciones.html", controller: "PageCtrl"})
     // Pages
     /*
         Rutas relacionadas a empleados

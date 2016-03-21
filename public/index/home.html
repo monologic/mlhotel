@@ -9,7 +9,7 @@
 
 
     <h3 class="text-center wow fadeInDown" data-wow-duration="2s"  data-wow-delay="2s" style="display:block;position:relative;top:20px;margin-bottom:20px">Te Ofrecelos las siguientes Habitaciones</h3>
-     <section class="Cont-Hab" ng-controller="habtipoController" ng-init="getHabTipo();" style="min-height:300px;top:20px">
+     <section class="Cont-Hab" ng-controller="habtipoController" ng-init="descrip();getHabTipo();" style="min-height:300px;top:20px">
     
       <div class="Hab row wow fadeInUp" data-wow-duration="2s"  data-wow-delay="0.5s" ng-repeat="y in habtipos">
           
@@ -21,7 +21,7 @@
           <div class="tdes">
              <h4>{{y.nombre}}</h4>
              <p>Capacidad: {{y.nropersonas}} personas</p>
-             <div> {{y.descripcion}} </div>
+             <div id="th{{y.id}}"></div>
           </div> 
         </div> 
 

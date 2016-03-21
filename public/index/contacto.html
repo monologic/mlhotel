@@ -20,3 +20,26 @@
 	  	<input type="submit" class="btn btn-primary" value="Enviar">
 	</form>
 </div>
+<br><br>
+<div id="map" style="width:400px; height:400px;margin:auto"></div>
+
+<script src="http://maps.google.com/maps/api/js?sensor=false&callback=initMap"></script>
+
+<script>
+	function initMap() {
+  // Create a map object and specify the DOM element for display.
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat:-17.1953857 , lng: -70.9347342},
+    scrollwheel: false,
+    zoom: 16,
+  });
+  var marker = new google.maps.Marker({
+    position: {lat:-17.195582 , lng:-70.934217},
+    map: map,
+    title: 'Hello World!'
+  });
+
+}
+</script>
+
+

@@ -1,16 +1,24 @@
-
 app.controller('habtipoController', function($scope,$http) {
 	var hotel;
 	var datos;
+    var gdata;
     $scope.getHabTipo = function () {
         $http.get('admin/AddHab').then(function successCallback(response) {
         	$scope.habtipos=response.data;
+
+            gdata=response.data;
             
         }, function errorCallback(response) {
         // called asynchronously if an error occurs
         // or server returns response with an error status.
         });
+       
     }
+       
+      $scope.descrip = function () {
+        console.log('entra');
+        
+        }    
 
     var details = Array();
     $scope.addDetalleReserva =function (data) {

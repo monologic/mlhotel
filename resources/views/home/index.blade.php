@@ -10,7 +10,6 @@
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
-
     <!-- Styles -->
     <link rel="stylesheet" href="index/css/reset.css">
     <link rel="stylesheet" href="index/css/animate.css">
@@ -78,20 +77,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Habitaciones</a></li>
+        <li><a href="#/habitaciones">Habitaciones</a></li>
         <li><a href="#/galeria">Galeria</a></li>
         <li><a href="#">Servicios</a></li>
         <li><a href="#/noticias">Noticias</a></li>
-        <li class="dropdown">
-          <a href="#/contacto" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contactos <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
+        <li><a href="#/contacto">Contacto</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -112,6 +102,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
 
     <script src="index/js/wow.min.js"></script>  
+
    
     <!-- Angular-Bootrstrap UI --> 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
@@ -131,9 +122,14 @@
     <script src="plugins/js/controllers/habtipoController.js"></script>
     <script src="plugins/js/controllers/galeryController.js"></script>
     <script src="plugins/js/controllers/noticiaController.js"></script>
+    <script src="plugins/js/directivas/textHtml.js"></script>
   
     <link rel='stylesheet' href='plugins/galery/css/jquery.fancybox.min.css'/>
    <script src="plugins/galery/js/jquery.fancybox.min.js"></script>
+
+
+   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="https://raw.github.com/HPNeo/gmaps/master/gmaps.js"></script>
 
    <script>
     $(document).ready(function(){
@@ -151,6 +147,17 @@
     new WOW().init();
     
     </script>
+    <script>
+      function initMap() {
+      // Create a map object and specify the DOM element for display.
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        scrollwheel: false,
+        zoom: 8
+      });
+    }
+    </script>
+
 
 </body>
 </html>

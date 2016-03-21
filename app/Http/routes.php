@@ -57,6 +57,8 @@ Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 
 	Route::post('enviarmsj', 'ContactoController@NewContacto');
 
+	Route::get('getHotelF', 'HotelController@getHotelesFooter');
+
 
 
 /*

@@ -28,3 +28,15 @@ Administrador del hotel(sucursal): El administrador solo tendrá acceso a la inf
 Cargos y hoteles
 Asignar administrador de hotel
 Sistema Gestor de Contenido
+
+index(ok)
+galeria (titulo- stile simple)(ok)
+contacto(mapa)(ok)
+
+
+galeria de fotos por servicio. videos -menu fijo con elementos desplegables -
+
+perfin de habitacion
+galeria de fotos por habitacion(iconografia). videos
+!pasar el id de la habitacion para mostrar infomacion de la habitacion!
+

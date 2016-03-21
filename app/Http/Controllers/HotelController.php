@@ -59,7 +59,7 @@ class HotelController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -207,5 +207,12 @@ class HotelController extends Controller
     {
         $hoteles = Hotel::all();
         return response()->json( $hoteles->toArray() );   
+    }
+     public function getHotelesFooter()
+    {
+        $hotel = Hotel::orderBy('id', 'asc')->get();
+        $hotel = $hotel->toArray();
+        //Sdd($hotel);
+        return response()->json( $hotel[0] );   
     }
 }
