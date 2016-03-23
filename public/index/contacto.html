@@ -1,4 +1,6 @@
 <div class="container contacto">
+		<h3 class="text-center tit2">Contacto</h3>
+	<br>
 	<form  method="POST" action="enviarmsj" class="con-form col-sm-6 col-xs-12"  enctype="multipart/form-data">
 		<div class="form-group">
 	        <label for="nombre">Nombre</label>
@@ -17,11 +19,14 @@
 			 <textarea class="form-control" rows="3" id="mensaje" name="mensaje"></textarea>
 	  	</div>
 	  	<br>
-	  	<input type="submit" class="btn btn-primary" value="Enviar">
+	  	<input type="submit" class="btn btn-primary" style="width:150px" value="Enviar">
 	</form>
 </div>
 <br><br>
-<div id="map" style="width:400px; height:400px;margin:auto"></div>
+<h3 class="text-center">Nuestra Ubicacion</h3>
+<br>
+
+<div id="map" style="width:80%px; height:500px;margin:auto"></div>
 
 <script src="http://maps.google.com/maps/api/js?sensor=false&callback=initMap"></script>
 
@@ -29,7 +34,7 @@
 	function initMap() {
   // Create a map object and specify the DOM element for display.
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat:-17.1953857 , lng: -70.9347342},
+    center: {lat:-17.195582 , lng:-70.934217},
     scrollwheel: false,
     zoom: 16,
   });

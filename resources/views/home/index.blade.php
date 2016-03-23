@@ -31,6 +31,8 @@
   
 </head>
 <style>
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 .pie{
 
   margin-top: 80px;
@@ -41,6 +43,11 @@
   width: 100%;
   background-color: black;
   min-height:200px; 
+}
+
+.font-menu{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 
 #owl-demo{
@@ -59,29 +66,57 @@
     display: inline-block;
     margin-top: 20px;
 }
+.icon-redes{
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 30px 20px;
+}
+.icon-redes:hover{
+  width: 57px;
+  height: 57px;
+  font-size: 1.7rem; 
+  transition: all 0.5s ease;
+  position: relative;
+}
+.icon-redes i{
+ position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  margin: auto;
+  font-size: 1.6rem;
+}
+.inf-footer{
+  font-size: 1.2rem;
+}
 </style>
 <body ng-app="homeApp">
  <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header navbar-left">
+    <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand " href="#">Hotel Moquegua</a>
+      <a class="navbar-brand " href="#"><img src="{{ asset('imagen/hostal.gif') }}" style="width:150px;margin:auto;margin-top:-15px;"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#/habitaciones">Habitaciones</a></li>
-        <li><a href="#/galeria">Galeria</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#/noticias">Noticias</a></li>
-        <li><a href="#/contacto">Contacto</a></li>
+        <li class="font-menu"><a href="#/">INICIO</a></li>
+        <li class="font-menu"><a href="#/habitaciones">HABITACIONES</a></li>
+        <li class="font-menu"><a href="#/galeria">GALERIA</a></li>
+        <li class="font-menu"><a href="#/noticias">NOTICIAS</a></li>
+        <li class="font-menu"><a href="#/contacto">CONTACTO</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -93,7 +128,35 @@
 <div ng-view  style="margin-botton:50px"></div>
 
 
-<footer class="pie">
+<footer class="pie row">
+
+<div class="col-md-4 col-sm-6 col-xs-6">
+  <img src="{{ asset('imagen/hostal.gif') }}" style="width:50%;margin:35px 25% auto 25%">
+</div>
+  
+<div class="col-md-4 col-sm-6 col-xs-6">
+  <p style="font-family: 'Ubuntu', sans-serif; margin-top:30px;margin-left:20%">Nuestras redes sociales:</p>
+  <div class="icon-redes" style="background-color:#446CB3">
+    <i class="fa fa-facebook" style="width: 20%;"></i>
+  </div>
+  <div class="icon-redes" style="background-color:#22A7F0 " >
+    <i class="fa fa-twitter" style="width: 25%;"></i>
+  </div>  
+  <div class="icon-redes" style="background-color:#F22613" >
+    <i class="fa fa-youtube-play" style="width: 30%;"></i>
+  </div>
+
+</div>
+  
+<div class="col-md-4 col-sm-12 col-xs-12">
+  <p style="font-family: 'Ubuntu', sans-serif; margin-top:30px;margin-left:20%">Informacion:</p>
+  <p class="inf-footer">Calle Cuzco Nº 454 / Moquegua - Perú</p>
+  <p class="inf-footer">E-mail: reservas@residencialmoquegua.com</p>
+  <p class="inf-footer">Telf.: 46-2316</p>
+  <p class="inf-footer">Cel. Movistar 953970565</p>
+  <p class="inf-footer"> Rpm #953970565.</p>
+</div>
+  
     
 </footer>   
      <!-- Llamado a angular-->
@@ -129,8 +192,6 @@
 
 
    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script type="text/javascript" src="https://raw.github.com/HPNeo/gmaps/master/gmaps.js"></script>
-
    <script>
     $(document).ready(function(){
     //FANCYBOX
@@ -147,17 +208,5 @@
     new WOW().init();
     
     </script>
-    <script>
-      function initMap() {
-      // Create a map object and specify the DOM element for display.
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        scrollwheel: false,
-        zoom: 8
-      });
-    }
-    </script>
-
-
 </body>
 </html>
