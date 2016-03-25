@@ -146,4 +146,33 @@ ul.navbar-right li a {
     text-decoration: none;   
 }
 
-/* estilo de jquery file up*/
+
+/* Galeria de fotos de Habitacion*/
+.cont-foto{
+	display: block;
+	position: relative;
+	width: 80%;
+	padding: 20px;
+	background-color: rgb(240,240,240);
+	border-radius: 10px;
+}
+.galeria-f{
+	display: inline-block;
+	position: relative;
+	width: 165px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+.btn-x{
+	display: block;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background-color: black;
+	border-radius: 50%;
+	text-align: center;
+	top:-10px;
+	right:-10px;
+	padding-top: 3px;
+}
+

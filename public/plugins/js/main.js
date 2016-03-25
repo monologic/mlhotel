@@ -39,6 +39,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 
     .when("/tipoHab", {templateUrl: "partials/admin/TipoHab/crear.html", controller: "PageCtrl"})
     .when("/LisHab", {templateUrl: "partials/admin/TipoHab/ver.html", controller: "PageCtrl"})
+    .when('/HabGalery/:habtipoId', {templateUrl: "partials/admin/TipoHab/galeria.html", controller: "PageCtrl"})
 
     .when("/Hoteles", {templateUrl: "partials/admin/hotel/ver.html", controller: "PageCtrl"})
     .when("/Hoteles/crear", {templateUrl: "partials/admin/hotel/crear.html", controller: "PageCtrl"})

@@ -19,10 +19,10 @@
     
     <link rel="stylesheet" type="text/css" href="plugins/css/bootstrap.css" />
     <!-- Latest compiled and minified JavaScript -->
-    <script src="plugins/js/bootstrap.min.js""></script>
+    <script src="plugins/js/bootstrap.min.js"></script>
     <!-- food icons -->
     <link rel="stylesheet" type="text/css" href="plugins/multilevel/css/organicfoodicons.css" />
-     <link rel="stylesheet" type="text/css" href="plugins/css/kira.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/css/kira.css" />
     <!-- demo styles -->
      <link rel="stylesheet" href="plugins/Trumbowyg/ui/trumbowyg.min.css">
     <link rel="stylesheet" type="text/css" href="plugins/multilevel/css/demo.css" />
@@ -210,6 +210,7 @@
     <script src="plugins/js/controllers/galeryController.js"></script>
     <script src="plugins/js/controllers/noticiaController.js"></script>
     <script src="plugins/js/controllers/contactoController.js"></script>
+    <script src="plugins/js/controllers/habtipogalController.js"></script>
     
 
     <script>

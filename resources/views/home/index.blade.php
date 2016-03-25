@@ -94,7 +94,10 @@
 
 
 <footer class="pie">
-    
+    <div id="page-wrapper" ng-controller="hotelController" ng-init="getHotelesF();">
+    <div ng-repeat="y in infos"></div>
+      <p style="color:white">{{y.nombre}}</p>
+    </div>
 </footer>   
      <!-- Llamado a angular-->
     <script src="http://code.jquery.com/jquery-latest.js"></script>

@@ -1,4 +1,4 @@
-app.controller('habtipoController', function($scope,$http) {
+app.controller('habtipoController', function($scope,$http,$location) {
 	var hotel;
 	var datos;
     var gdata;
@@ -65,5 +65,9 @@ app.controller('habtipoController', function($scope,$http) {
         });
     }
 
+     $scope.goTo2 = function(data) {
+         idHabtipo = data.id;
+    $location.url('/HabGalery/' + idHabtipo);
+  };
     
 });
